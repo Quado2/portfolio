@@ -21,12 +21,12 @@ function App() {
 
   return (
     <div className="App">
-        {!loaded?
+         {/* {!loaded?
         <Preloader /> 
-        :
+        :  */}
         <Home />
-      }
-        
+      {/* } 
+         */}
     </div>
   );
 }

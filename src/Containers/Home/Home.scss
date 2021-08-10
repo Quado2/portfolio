@@ -1,0 +1,265 @@
+
+.glitch{
+    
+    position: relative;
+    opacity: 0;
+    animation: appear-in .7s ease-in-out forwards 0.7s;
+    
+}
+
+.glitch span{
+    position: absolute;
+    animation: glitch1 3.6s infinite,
+}
+
+.glitch span:first-child{
+    animation: glitch1 3s infinite , glitch-move-1 2s infinite;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    transform: translate(-0.019em, -0.015em);
+}
+.glitch span:last-child{
+    animation: glitch1 2.6s infinite 1.5s;
+    z-index: 2;
+    clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+    transform: translate(0.015em, 0.015em);
+    
+}
+
+
+
+/* adding the animations  with scss*/
+div h2{
+    opacity: 0;
+}
+
+
+@for $i from 1 through 3{
+    .home-top .first-h2 h2:nth-child(#{$i}){
+        animation: bounce-in .5s forwards (#{$i *0.1s}); 
+    }
+}
+
+
+@for $i from 4 through 6{
+    .home-top .first-h2b>h2:nth-child(#{$i - 3}){
+        animation: bounce-in .5s forwards (#{$i *0.08s}); 
+    }
+}
+
+
+@for $i from 8 through 15{
+    .home-top .second-h2>h2:nth-child(#{$i - 7}){
+        animation: bounce-in .5s forwards (#{$i *0.08s}); 
+    }
+}
+
+@for $i from 16 through 32{
+    .home-top .third-h2>h2:nth-child(#{$i - 15}){
+        animation: bounce-in .2s forwards (#{$i *0.08s}); 
+    }
+}
+
+.home-top  .glitch-follow{
+    display: flex;
+}
+
+.home-top .top-home-container p{
+    animation: appear-in 1s ease-in-out forwards .8s;
+    }
+
+.home-top .top-home-container a{
+    animation: appear-in 1s ease-in-out forwards 1.5s;
+        }
+
+@keyframes appear-in{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glitch-move-1{
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    }
+
+    50%{
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+
+   100%{
+        clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    }
+}
+
+    
+
+
+@keyframes rotate-in {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce-in{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    5%{
+        opacity: .1;
+        transform: scale(1.1);
+    }
+
+    45%{
+        opacity: .4;
+        transform: scale(0.9);   
+     }
+
+     70%{
+         transform: scale(1.05);
+     }
+     
+     85%{
+         transform: scale(0.95);
+     }
+
+
+     95%{
+        transform: scale(1.02);
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes glitch1{
+    0%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+    13%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+    15%{
+        text-shadow: 
+        -0.07em 0 0.03em  rgba(0, 255, 0, 0.541),
+        -0.02em -0.02em 0.0em  rgba(255, 0, 0, 0.589),
+        0.04em 0.08em 0 rgba(0,0,255,0.75);
+    }
+    29%{
+        text-shadow: 
+        -0.05em 0 0.02em  rgba(0, 255, 0, 0.541),
+        -0.01em -0.02em 0.03em  rgba(255, 0, 0, 0.589),
+        0.025em 0.04em 0 rgba(0,0,255,0.75);
+    }
+
+    30%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+    50%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+    55%{
+        text-shadow: 
+        -0.09em 0 0.02em  rgba(0, 255, 0, 0.541),
+        0.09em 0.04em 0.03em  rgba(255, 0, 0, 0.589),
+        0.07em 0.04em 0 rgba(0,0,255,0.75);
+    }
+
+    60%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+    65%{
+        text-shadow: 
+        -0.08em 0 0.03em  rgba(0, 255, 0, 0.541),
+        0.07em 0.04em 0.03em  rgba(255, 0, 0, 0.589),
+        0.09em 0.06em 0 rgba(0,0,255,0.75);
+    }
+
+    74%{
+        text-shadow: 
+        -0.05em 0 0.02em  rgba(0, 255, 0, 0.541),
+        0.08em 0.03em 0.03em  rgba(255, 0, 0, 0.589),
+        0.07em 0.04em 0 rgba(0,0,255,0.75);
+    }
+
+    75%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+    88%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+
+
+    90%{
+        text-shadow: 
+        -0.06em 0 0.03em  rgba(0, 255, 0, 0.541),
+        -0.2em -0.02em 0.03em  rgba(255, 0, 0, 0.589),
+        0.05em 0.04em 0 rgba(0, 0, 255, 0.623);
+    }
+
+    100%{
+        text-shadow: 
+        -0.0 0 0  rgba(0, 255, 0,0.75),
+        0 0 0  #ff0000bf,
+        0 0 0 rgba(0,0,255,0.75);
+    }
+}
+
+@media screen and (min-width:380px) and (max-width: 766px){
+    .top-home-container{
+        .first-h2 h2, .first-h2b h2{
+            font-size: 3.3rem;
+            padding-bottom: 5px;
+        }
+
+        .glitch{
+            height: 5rem;
+        }
+
+        .third-h2{
+            font-size: 2.4rem;
+            margin-top: 1.3rem;
+        }
+    }
+}

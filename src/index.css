@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities{
+  .-pb-2{
+     margin-bottom: -0.15rem;
+  }
+
+}
+
+@layer components{
+   .top-h2{
+    @apply text-4xl font-semibold font-sans text-left flex
+  }
+}
+
+
 * {
   margin: 0;
   padding: 0;
