@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The color codes here was used to make 
+setting the opacity possible. refer to withOpacity of the 
+function used to set the color of at the tailwind.config file
+*/
+
+ @layer base{
+   :root{
+     --color-text-base: 255, 255, 255;
+     --color-text-muted: 163, 163, 163;
+     --color-text-inverted: 2, 255, 2;
+     --color-fill:  19, 15, 15;
+     --color-button: 2, 255, 2;
+     --color-button-hover: 0, 197, 99;
+  
+   }
+
+   .theme-purple{
+    --color-text-base: 147, 128, 255;
+    --color-text-muted: 214, 206, 255;
+    --color-text-inverted: 255, 199, 14;
+    --color-fill: 22, 38, 49;
+    --color-button: 255, 199, 14;
+    --color-button-hover: 0, 197, 99;
+   
+  }
+ }
+
+  .test{
+    color: 
+  }
+
 
 @layer utilities{
   .-pb-2{

@@ -3,6 +3,7 @@
     
     position: relative;
     opacity: 0;
+    transition: ease-in-out .7s;
     animation: appear-in .7s ease-in-out forwards 0.7s;
     
 }
@@ -31,6 +32,7 @@
 /* adding the animations  with scss*/
 div h2{
     opacity: 0;
+    transition: ease-in-out .7s;
 }
 
 

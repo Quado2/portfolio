@@ -20,13 +20,13 @@ function App() {
  
 
   return (
-    <div className="App">
-         {/* {!loaded?
+    <div className="App theme-purple">
+         {!loaded?
         <Preloader /> 
-        :  */}
+        : 
         <Home />
-      {/* } 
-         */}
+        } 
+         
     </div>
   );
 }
