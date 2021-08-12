@@ -21,7 +21,7 @@ animation: fade-anime .5s ease-in-out forwards 2.5s
 }
 
 .preloader #chikwado path{
-    stroke: var(--primary);
+    stroke: rgb(var(--color-text-base));
     stroke-width:2px;
    
 }
@@ -79,7 +79,7 @@ svg path:nth-child(9){
 }
 
 .preloader .load{
-    background-color: var(--primary);
+    background-color:  rgb(var(--color-text-base));
     width: 0%;
     height: 1px;
     border-radius: 20px;
@@ -114,7 +114,7 @@ svg path:nth-child(9){
         fill: transparent;;
     }
     to{
-        fill: var(--primary);
+        fill:  rgb(var(--color-text-base));
     }
 }
 
