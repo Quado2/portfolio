@@ -21,65 +21,65 @@ animation: fade-anime .5s ease-in-out forwards 2.5s
 }
 
 .preloader #chikwado path{
-    stroke: rgb(var(--color-text-base));
+    stroke: rgb(var(--color-button));
     stroke-width:2px;
    
 }
 
-svg path:nth-child(1){
+.preloader svg path:nth-child(1){
     stroke-dasharray: 440px;
     stroke-dashoffset: 440px;
     display: none;
     
 }
 
-svg path:nth-child(2){
+.preloader svg path:nth-child(2){
     stroke-dasharray: 686px;
     stroke-dashoffset: 686px;
     animation: line-anime 2s ease-in-out forwards 0.5s, scale-anime .2s ease-in-out 1.2s forwards;;
 }
 
-svg path:nth-child(3){
+.preloader svg path:nth-child(3){
     stroke-dasharray: 720px;
     stroke-dashoffset: 720px;
     animation: line-anime 2s ease-in-out forwards 0.4s;
 }
-svg path:nth-child(4){
+.preloader svg path:nth-child(4){
     stroke-dasharray: 691px;
     stroke-dashoffset: 691px;
     animation: line-anime 2s ease-in-out forwards 0.6s;
 }
-svg path:nth-child(5){
+.preloader svg path:nth-child(5){
     stroke-dasharray: 801px;
     stroke-dashoffset: 801px;
     animation: line-anime 2s ease-in-out forwards;
 }
-svg path:nth-child(6){
+.preloader svg path:nth-child(6){
     stroke-dasharray: 800px;
     stroke-dashoffset: 800px;
     animation: line-anime 2s ease-in-out forwards .2s;
 }
   
-svg path:nth-child(7){
+.preloader svg path:nth-child(7){
     stroke-dasharray: 723px;
     stroke-dashoffset: 723px;
     animation: line-anime 2s ease-in-out forwards .4s;
 }
 
-svg path:nth-child(8){
+.preloader svg path:nth-child(8){
     stroke-dasharray: 519px;
     stroke-dashoffset: 519px;
     animation: line-anime 2s ease-in-out forwards .6s;
 }
 
-svg path:nth-child(9){
+.preloader svg path:nth-child(9){
     stroke-dasharray: 519px;
     stroke-dashoffset: 519px;
     animation: line-anime 2s ease-in-out forwards .6s;
 }
 
 .preloader .load{
-    background-color:  rgb(var(--color-text-base));
+    background-color:  rgb(var(--color-button));
     width: 0%;
     height: 1px;
     border-radius: 20px;
@@ -114,7 +114,7 @@ svg path:nth-child(9){
         fill: transparent;;
     }
     to{
-        fill:  rgb(var(--color-text-base));
+        fill:  rgb(var(--color-button));
     }
 }
 

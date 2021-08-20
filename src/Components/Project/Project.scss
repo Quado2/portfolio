@@ -1,0 +1,27 @@
+.project{
+    width: 90%;
+    
+    .project-top{
+        position: relative;
+        svg{
+            fill: white;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            margin: 20px;
+        }
+    }
+}
+
+.project:hover{
+    border: 1px solid green;
+}
+
+
+@media screen and (min-width: 410px) {
+    .project{
+        width: 280px;
+
+    }
+}
+
