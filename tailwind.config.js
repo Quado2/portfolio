@@ -25,12 +25,18 @@ module.exports = {
       borderColor:{
         skin:{
           button: withOpacity('--color-button'),
+          base: withOpacity('--color-text-base'),
+          muted: withOpacity('--color-text-muted'),
+          hover: withOpacity('--color-text-hover'),
         }
       },
 
       backgroundColor: {
         skin:{
           button: withOpacity('--color-button'),
+          base: withOpacity('--color-text-base'),
+          muted: withOpacity('--color-text-muted'),
+          hover: withOpacity('--color-text-hover'),
         }
       },
 
