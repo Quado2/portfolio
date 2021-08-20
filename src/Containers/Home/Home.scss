@@ -250,7 +250,7 @@ div h2{
     }
 }
 
-@media screen and (min-width:320px) and (max-width: 766px){
+@media screen and (min-width:370px) and (max-width: 766px){
     .top-home-container{
         .first-h2 h2, .first-h2b h2{
             font-size: 3rem;
@@ -259,7 +259,39 @@ div h2{
 
         .glitch{
             height: 5rem;
-            font-size: 3.4rem;
+            font-size: 4.2rem;
+            padding-bottom: 5px;
+        }
+
+        .third-h2{
+            font-size: 2.4rem;
+            margin-top: 1.3rem;
+        }
+    }
+}
+@media screen and (min-width:320px) and (max-width: 370px){
+    .top-home-container{
+     
+
+        .glitch{
+            height: 5rem;
+            font-size: 3.2rem;
+            padding-bottom: 5px;
+        }
+
+    }
+}
+
+@media screen and (min-width:370px) and (max-width: 766px){
+    .top-home-container{
+        .first-h2 h2, .first-h2b h2{
+            font-size: 3rem;
+            padding-bottom: 5px;
+        }
+
+        .glitch{
+            height: 5rem;
+            font-size: 4.2rem;
             padding-bottom: 5px;
         }
 

@@ -38,7 +38,7 @@ function App() {
         :
         <div className='app-wrapper h-100'>
           <div className='theme flex items-start' style={{color: 'white'}}> 
-            <img className='border w-20 mt-4 ml-3 mr-auto' src ={zuriImage} alt='zuri logo' />
+            <img className='border w-14 mt-4 ml-3 mr-auto' src ={zuriImage} alt='zuri logo' />
             <button className="purple-button" onClick={()=> dispatch(changeTheme("theme-purple"))}>Purple theme</button>
             <button className="white-button" onClick={() => dispatch(changeTheme("theme-white"))}>White theme</button>
           </div>
