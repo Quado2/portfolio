@@ -15,6 +15,33 @@
   pointer-events: none;
 }
 
+.app-wrapper{
+  width: 100%;
+}
+
+.theme{
+  width: 100%;
+  text-align: right;
+}
+
+.theme button{
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 20px 5px;
+  border-radius: 5px;
+}
+
+.theme .purple-button{
+  border: 1px solid rgb(137, 2, 179);
+  color: rgb(137, 2, 179);
+}
+
+.theme .white-button{
+  border: 1px solid white;
+  color: white;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

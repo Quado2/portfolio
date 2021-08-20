@@ -6,6 +6,7 @@ import {changeTheme, changewhite} from './redux/actions' //no need to  include i
 import './App.css';
 import Preloader from './Components/Preloader/Preloader'
 import Home from './Containers/Home/Home'
+import Portfolio from './Containers/Portfolio/Portfolio'
 
 function App() {
 
@@ -28,20 +29,20 @@ function App() {
 
   return (
   <div className={`App ${theme}`}>
-         {!loaded?
+         {/* {!loaded?
         <Preloader /> 
-        : 
-        <div>
-          <Home />
-          <div style={{color: 'white'}}> 
-            <button className="border" onClick={()=> dispatch(changeTheme("theme-purple"))}>Make Purple</button>
-            <button className="border" onClick={() => dispatch(changeTheme("theme-white"))}> Make White</button>
-            Theme Chosen = {theme}
+        :  */}
+        <div className='app-wrapper'>
+          <div className='theme' style={{color: 'white'}}> 
+            <button className="purple-button" onClick={()=> dispatch(changeTheme("theme-purple"))}>Purple theme</button>
+            <button className="white-button" onClick={() => dispatch(changeTheme("theme-white"))}>White theme</button>
           </div>
+          <Home />
+          <Portfolio />
         </div>
         
-        
-        } 
+{/*         
+        }  */}
          
     </div>
   );

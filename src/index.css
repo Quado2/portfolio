@@ -19,7 +19,7 @@ function used to set the color of at the tailwind.config file
    }
 
    .theme-purple{
-    --color-text-base: 147, 128, 255;
+    --color-text-base: 137, 2, 179;
     --color-text-muted: 214, 206, 255;
     --color-text-inverted: 255, 199, 14;
     --color-fill: 22, 38, 49;

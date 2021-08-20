@@ -4,8 +4,8 @@ import './Home.scss'
 function Home (){
 
     return (
-        <div className='home-top h-full w-full'>
-            <div className=' top-home-container flex flex-col justify-center items-start p-7 sm:p-16  w-full h-screen'>
+        <div className='home-top  w-full '>
+            <div className=' top-home-container flex flex-col justify-center items-start p-7 sm:p-16  w-full h-3/4'>
                 <div className= 'first-h2 text-skin-base top-h2 sm:text-7xl lg:text-8xl'>
                     <h2 className=''>H</h2>
                     <h2>i</h2>
@@ -16,21 +16,12 @@ function Home (){
                     <h2 className=''> I</h2>
                     <h2>'</h2>
                     <h2>m</h2>
-                    <div className='text-skin-base glitch text-4xl sm:text-8xl lg:text-9xl flex items-end md:-pb-2  ml-4 w-11 h-16'>
+                    <div className='text-skin-base glitch text-4xl sm:text-8xl lg:text-9xl flex items-end md:-pb-2  ml-4 mt-20 w-11 h-16'>
                         <span >Chikwado</span>
                         <span aria-hidden='true'>Chikwado</span>
                         <span aria-hidden='true'>Chikwado,</span>
                     </div>
-                    {/* <div className='second-h2 glitch-follow m-0'>
-                        <h2>h</h2>
-                        <h2>i</h2>
-                        <h2>k</h2>
-                        <h2>w</h2>
-                        <h2>a</h2>
-                        <h2>d</h2>
-                        <h2>o</h2>
-                        <h2>,</h2>
-                    </div> */}
+                    
                     
                 </div>
                 <div className='text-skin-base third-h2 text-2xl sm:text-5xl flex font-semibold font-sans text-left mt-4'>
