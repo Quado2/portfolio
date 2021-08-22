@@ -32,6 +32,12 @@ function Portfolio () {
                         stacks='React, Tailwind css'
                         pageLink='https://quado-stage2.netlify.app/'
                         githubLink='https://github.com/Quado2/hng8-team'/>
+
+                <Project title='Face Analysis API' 
+                        description='Used free AI API to analyze faces on an image. My very first project when I started out with web development. Inspired by the course project.'
+                        stacks='React, Node js Postgresql'
+                        pageLink='https://smart-brain-200.herokuapp.com//'
+                        githubLink='https://github.com/Quado2/Face-Analyzer'/>
             </div>
         </div>
     )
