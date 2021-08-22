@@ -1,3 +1,14 @@
+.school{
+    transform: translateY(15px);
+    opacity: 0;
+    transition: all ease-in-out 0.6s;
+}
+
+.school.appear{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 .school .details{
     border-left: 1px solid gray;
     max-width: 750px;

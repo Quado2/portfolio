@@ -1,12 +1,45 @@
 import './School.scss'
+import {useState, useEffect} from 'react'
+
+function useOnVisible(options) {
+    const [ref, setRef] = useState(false)
+    const [appearClass, setAppearClass] = useState('')
+    useEffect(()=>{
+
+        const observer = new IntersectionObserver(([entry])=>{
+            if(entry.isIntersecting){
+                setAppearClass('appear')
+            }
+        }, options)
+
+        if(ref){
+            observer.observe(ref)
+        }
+
+        return() => {
+            if(ref){
+                observer.unobserve(ref)
+            }
+        }
+
+    },[ref,options])
+
+    return [setRef, appearClass]
+}
 
 
 function School (props){
 
+
+    const options = {
+                     rootMargin: '0px 0px -200px 0px'
+                    }
+    const [setRef, appearClass] = useOnVisible(options)
+
     const {grade, awards, dept, school, courses, period, role} = props
 
     return(
-        <div className='school w-100'>
+        <div ref={setRef} className={`${appearClass} school w-100`}>
            <div className=' w-100 flex '>
                <div className= ' outer-ball bg-skin-base w-7 h-7 rounded-3xl flex justify-center items-center'>
                     <div className='inner-ball w-5 h-5 bg-skin-button rounded-3xl'></div>

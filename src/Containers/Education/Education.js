@@ -2,6 +2,9 @@
 import './Education.scss'
 import RollText from '../../Components/RollText/RollText'
 import School from '../../Components/School/School'
+
+
+
 function Education() {
 
     return(

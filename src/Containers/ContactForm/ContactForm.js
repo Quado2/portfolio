@@ -20,7 +20,7 @@ function ContactForm() {
 
 
     return(
-        <div className='contact-form w-100 m-5'>
+        <div className='contact-form w-100 m-5 flex flex-col items-center'>
             <Backdrop show={submited} />
             {submited?
                 <Notification 
@@ -29,7 +29,7 @@ function ContactForm() {
                     message='Thanks, your form has been received.'/> 
              :
              null}
-            <div className=' mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
+            <div className=' mb-10 text-left mr-auto  text-skin-button text-5xl sm:text-7xl '>
                 <RollText text='Contact Me' /> 
             </div>
             <div className=' ml-1  input-wrapper pl-7 rounded border'>
