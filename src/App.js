@@ -11,6 +11,7 @@ import About from './Containers/About/About'
 import Experience from './Containers/Experience/Experience';
 import ContactForm from './Containers/ContactForm/ContactForm';
 import zuriImage from './images/zuri_logo.png'
+import Education from './Containers/Education/Education'
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
           <About />
           <Portfolio />
           <Experience />
+          <Education />
           <ContactForm />
         </div>
         }  
