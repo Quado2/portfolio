@@ -12,6 +12,8 @@
 }
 
 
+
+
 @for $i from 1 through 60{
     .roll-text h2:nth-child(#{$i}){
         animation: bounce-in .4s forwards (#{$i *0.05s}),

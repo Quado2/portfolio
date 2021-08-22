@@ -2,6 +2,8 @@ import './RollText.scss'
 
 function RollText(props){
 
+
+
     return(
         <div className='roll-text' disabled>
             {props.text.split('').map((letter,i) => {
