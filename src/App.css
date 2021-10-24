@@ -3,7 +3,6 @@ html, body { height: 100%; width: 100%;}
 
 .App {
   text-align: center;
-  background-color: #1d1d1d;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -44,5 +43,13 @@ html, body { height: 100%; width: 100%;}
 .theme .white-button{
   border: 1px solid white;
   color: white;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 

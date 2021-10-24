@@ -32,7 +32,7 @@ function App() {
  
 
   return (
-  <div className={`App h-100 ${theme}`}>
+  <div className={`App h-100 bg-skin-general ${theme}`}>
         {!loaded?
         <Preloader /> 
         : 

@@ -15,6 +15,10 @@ function used to set the color of at the tailwind.config file
      --color-fill:  19, 15, 15;
      --color-button: 2, 255, 2;
      --color-button-hover: 0, 197, 99;
+     --color-background-logo: 6, 7, 7;
+     --color-background-general: 29, 29, 29;
+     --color-background-nav: 19, 19, 19;
+     
   
    }
 
@@ -25,6 +29,9 @@ function used to set the color of at the tailwind.config file
     --color-fill: 22, 38, 49;
     --color-button: 255, 199, 14;
     --color-button-hover: 0, 197, 99;
+    --color-background-logo: 6, 7, 7;
+    --color-background-general: 29, 29, 29;
+    --color-background-nav: 19, 19, 19;
    
   }
  }

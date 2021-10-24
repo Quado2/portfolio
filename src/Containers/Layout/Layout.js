@@ -5,7 +5,7 @@ function Layout(props) {
 	return (
 		<div className="Layout">
 			<div className="flex ">
-				<nav className="w-36 h-screen fixed  border">
+				<nav className="w-36 h-screen fixed">
                    <NavItems />
                 </nav>
 				<main className="ml-40">{props.children}</main>
