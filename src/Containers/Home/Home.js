@@ -17,8 +17,8 @@ function Home (){
                     <h2>'</h2>
                     <h2>m</h2>
                     <div className='text-skin-base glitch text-4xl sm:text-8xl lg:text-9xl flex items-end md:-pb-2  ml-4 mt-20 w-11 h-16'>
-                        <span >Chikwado</span>
-                        <span aria-hidden='true'>Chikwado</span>
+                        <span >Chikwado,</span>
+                        <span aria-hidden='true'>Chikwado,</span>
                         <span aria-hidden='true'>Chikwado,</span>
                     </div>
                     
