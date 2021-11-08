@@ -1,0 +1,28 @@
+.NavItems .navs li{
+    width: 100%;
+    border-top: 1px solid rgb(41, 41, 41);
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+.NavItems .navs li:last-child{
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+.NavItems .navs li:hover{
+    color: rgb(Var(--color-button))
+}
+
+.NavItems .socials  svg{
+    fill: rgb(var(--color-text-muted));
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    cursor: pointer
+}
+.NavItems .socials  svg:hover{
+    fill: rgb(Var(--color-button))
+}
+

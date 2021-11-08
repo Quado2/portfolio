@@ -17,12 +17,12 @@ function used to set the color of at the tailwind.config file
      --color-button-hover: 0, 197, 99;
      --color-background-logo: 6, 7, 7;
      --color-background-general: 29, 29, 29;
-     --color-background-nav: 19, 19, 19;
+     --color-background-nav: 24, 24, 24;
      
   
    }
 
-   .theme-purple{
+   .Purple-Dim{
     --color-text-base: 137, 2, 179;
     --color-text-muted: 214, 206, 255;
     --color-text-inverted: 255, 199, 14;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux';
-import {changeTheme} from './redux/actions' //no need to  include index. it will pick it by default
+import { useSelector,} from 'react-redux';
 
 
 import './App.css';
@@ -16,7 +15,6 @@ import Layout from './Containers/Layout/Layout';
 function App() {
 
   const theme = useSelector((state) => state.theme)
-  const dispatch = useDispatch();
 
 
   const [loaded, setLoaded] = useState(false)
@@ -30,18 +28,14 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
  
-
+console.log(theme)
   return (
   <div className={`App h-100 bg-skin-general ${theme}`}>
-        {!loaded?
+        {/* {!loaded?
         <Preloader /> 
-        : 
+        :  */}
         <Layout>
           <div className='app-wrapper h-100'>
-            <div className='theme flex items-start' style={{color: 'white'}}> 
-              <button className="purple-button" onClick={()=> dispatch(changeTheme("theme-purple"))}>Purple theme</button>
-              <button className="white-button" onClick={() => dispatch(changeTheme("theme-white"))}>White theme</button>
-            </div>
             <Home />
             <About />
             <Portfolio />
@@ -51,7 +45,7 @@ function App() {
           </div>
         </Layout>
         
-        }  
+        {/* }   */}
           
     </div>
   );

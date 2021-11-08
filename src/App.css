@@ -22,34 +22,7 @@ html, body { height: 100%; width: 100%;}
   height: 100%;
 }
 
-.theme{
-  width: 100%;
-  text-align: right;
-}
-
-.theme button{
-  font-size: 12px;
-  padding: 3px 5px;
-  margin-top: 0.75rem ;
-  margin-right: 0.75rem;
-  border-radius: 5px;
-}
-
-.theme .purple-button{
-  border: 1px solid rgb(137, 2, 179);
-  color: rgb(137, 2, 179);
-}
-
-.theme .white-button{
-  border: 1px solid white;
-  color: white;
-}
 
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 

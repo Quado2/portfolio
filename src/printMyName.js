@@ -1,1 +1,0 @@
-console.log("My name is: Eze Chikwado Emmanuel")

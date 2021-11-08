@@ -1,0 +1,56 @@
+.HamburgerOuter {
+    width: 42px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    margin-right: 2%;
+    border: 1px solid rgba(3, 68, 105, 1);
+    border-radius: 2px;
+    background-color: rgba(3, 68, 105, 0.25);
+    z-index: 90;
+    
+}
+.HamburgerMenu {
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.HamburgerMenu div{
+    width: 65%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.20s ease-out;  
+}
+
+.HamburgerMenu .middle{
+    width: 85%;
+}
+
+.RotateTop {
+    
+    transform: rotate(-37deg) translateX(-7px);
+}
+
+.RotateBottom {
+    transform: rotate(216deg) translateX(6px)
+}
+
+.RotateMiddle{
+    transform: translateX(2px);
+}
+
+
+
+@media (min-width:1300px){
+    .HamburgerOuter  {
+        display: none;
+    }
+}
