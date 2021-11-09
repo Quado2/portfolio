@@ -33,7 +33,7 @@ export default function ThemeSelector() {
     return (
         <div className='Topbar mx-2'>
             <BackdropLight show={showThemes} backdropClicked={handleBackdropClicked}  />
-            <div  className ="theme z-20">
+            <div  className ="theme z-10">
                 <div onClick={() => setShowThemes(!showThemes)}
                     className='selected-theme flex items-center justify-center border border-skin-muted hover:border-skin-button rounded cursor-pointer bg-skin-nav'>
                     <img className='m-1 w-7' src={change_theme} alt='change theme' />

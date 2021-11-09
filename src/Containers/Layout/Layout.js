@@ -6,7 +6,7 @@ import { useState } from "react";
 function Layout(props) {
 
 const [rotate, setRotate] = useState(false)
-const [showNavItems, setShowNavItems] = useState(true)
+const [showNavItems, setShowNavItems] = useState(false)
 
 function menuClicked (){
 
@@ -16,11 +16,12 @@ function menuClicked (){
 	return (
 		<div className="Layout">
 			<div className="flex ">
-				<nav className={`sidebar h-screen w-screen fixed z-10 opacity-0  md:w-36 md:opacity-1`}>
+				<nav className={`h-screen w-screen fixed top-0 left-0 opacity-0 
+					md:w-36 md:opacity-100 md:z-10 transition-all ${showNavItems ? "opacity-100 z-10": "opacity-0 z-0"}`}>
                    <NavItems />
                 </nav>
                 <Topbar rotate={rotate} menuClicked={menuClicked} />
-				<main className="ml-40">{props.children}</main>
+				<main className="md:ml-40 transition-all">{props.children}</main>
 			</div>
 
 			<footer className="footer"></footer>
