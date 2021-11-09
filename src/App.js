@@ -31,9 +31,9 @@ function App() {
 console.log(theme)
   return (
   <div className={`App h-100 bg-skin-general ${theme}`}>
-        {/* {!loaded?
+        {!loaded?
         <Preloader /> 
-        :  */}
+        : 
         <Layout>
           <div className='app-wrapper h-100'>
             <Home />
@@ -45,7 +45,7 @@ console.log(theme)
           </div>
         </Layout>
         
-        {/* }   */}
+         } 
           
     </div>
   );

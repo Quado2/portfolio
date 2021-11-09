@@ -17,7 +17,7 @@ function menuClicked (){
 		<div className="Layout">
 			<div className="flex ">
 				<nav className={`h-screen w-screen fixed top-0 left-0 opacity-0 
-					md:w-36 md:opacity-100 md:z-10 transition-all ${showNavItems ? "opacity-100 z-10": "opacity-0 z-0"}`}>
+					md:w-36 md:opacity-100 md:z-10 transition-opacity ${showNavItems ? "opacity-100 z-10": "opacity-0 z-0"}`}>
                    <NavItems />
                 </nav>
                 <Topbar rotate={rotate} menuClicked={menuClicked} />

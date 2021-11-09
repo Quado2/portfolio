@@ -2,7 +2,7 @@
 
 import { useDispatch} from 'react-redux';
 import {changeTheme} from '../../redux/actions'
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 
 import change_theme from "../../images/change_theme.svg"
@@ -13,11 +13,7 @@ export default function ThemeSelector() {
     const dispatch = useDispatch();
     const [selectedTheme, setSelectedTheme] = useState("Green-dim")
     const [showThemes, setShowThemes] = useState(false)
-
-    const themeRef = useRef();
-    const themeButtonRef = useRef();
-    
-    
+        
 
     function handleChangeTheme(themeName){
         dispatch(changeTheme(themeName))
