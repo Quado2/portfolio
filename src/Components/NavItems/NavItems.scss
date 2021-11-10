@@ -1,33 +1,33 @@
-.roll-text{
-    display: flex;
-    min-width: 100%;
-    margin-bottom: 7px;
-
-    h2{
-        font-weight: 400;
-        opacity: 0;
-        margin: 0;
-    }
-
+.erase li{
+    opacity: 0;
 }
 
+.smooth-in-logo {
+    opacity: 0;
+    animation: smooth-in 1s forwards .2s
+}
 
-@for $i from 1 through 60{
-    .roll-text h2:nth-child(#{$i}){
-        animation: bounce-in .4s forwards (#{$i *0.05s}),             
+@for $i from 1 through 10{
+    .animate-in li:nth-child(#{$i}){
+        animation: bounce-in .7s forwards (#{$i *0.05s}),             
     }
 }
 
-@keyframes rotate-in {
+@for $i from 1 through 10{
+    .animate-in-socials li:nth-child(#{$i}){
+        animation: bounce-in .7s forwards (#{($i+13) *0.05s}),             
+    }
+}
+
+@keyframes smooth-in{
     from{
-        transform: rotate(180deg);
+        opacity: 0;
     }
-
     to{
-        transform: rotate(360deg);
+        opacity: 1;
     }
 }
-    
+
 @keyframes bounce-in{
     0%{
         opacity: 0;
