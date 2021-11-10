@@ -8,7 +8,7 @@ import { useState } from "react";
 import change_theme from "../../images/change_theme.svg"
 import BackdropLight from '../BackdropLight/BackdropLight'
 
-export default function ThemeSelector() {
+export default function ThemeSelector({setInvisible}) {
 
     const dispatch = useDispatch();
     const [selectedTheme, setSelectedTheme] = useState("Green-dim")
@@ -26,8 +26,8 @@ export default function ThemeSelector() {
 
     
 
-    return (
-        <div className='Topbar mx-2'>
+    return (setInvisible && 
+        <div className=' mx-2'>
             <BackdropLight show={showThemes} backdropClicked={handleBackdropClicked}  />
             <div  className ="theme z-10">
                 <div onClick={() => setShowThemes(!showThemes)}
@@ -45,4 +45,6 @@ export default function ThemeSelector() {
             </div>
         </div>
     )
+
+
 }
