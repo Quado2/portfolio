@@ -43,6 +43,7 @@ module.exports = {
 
 			animation: {
 				"appear-in": "appear 1s ease-in-out forwards 1.2s",
+				"appear-now": "appearNow .7s ease-in-out forwards",
 			},
 		},
 		keyframes: {
@@ -50,6 +51,12 @@ module.exports = {
 				"0%": { opacity: "0", transform: "translateY(10px)" },
 				"100%": { opacity: "1", transform: "translateY(0)" },
 			},
+			appearNow: {
+				"0%": { opacity: "0"},
+				"10%":{ opacity: "0"},
+				"100%": { opacity: "1"},
+			},
+			
 		},
 	},
 	variants: {

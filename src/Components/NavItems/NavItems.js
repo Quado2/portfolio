@@ -19,7 +19,7 @@ function NavItems({showNavItems}) {
 
 	return (
 		<div className="NavItems bg-skin-nav h-screen">
-			<div className={`${styles.top} ${showNavItems ? "smooth-in-logo":""}`}>
+			<div className={`cursor-pointer ${styles.top} ${showNavItems ? "smooth-in-logo":""}`}>
 				<img src={logo} alt="logo" className="w-20" />
 				<h4 className="mt-2 text-skin-muted text-l">Chikwado</h4>
 				<h4 className="mt-1 text-skin-muted text-base">Software Engineer</h4>

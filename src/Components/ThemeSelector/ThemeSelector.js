@@ -13,6 +13,7 @@ export default function ThemeSelector({setInvisible}) {
     const dispatch = useDispatch();
     const [selectedTheme, setSelectedTheme] = useState("Green-dim")
     const [showThemes, setShowThemes] = useState(false)
+
         
 
     function handleChangeTheme(themeName){
@@ -29,11 +30,11 @@ export default function ThemeSelector({setInvisible}) {
     return (setInvisible && 
         <div className=' mx-2'>
             <BackdropLight show={showThemes} backdropClicked={handleBackdropClicked}  />
-            <div  className ="theme z-10">
+            <div  className ={`z-10  flex flex-col transition-all duration-500 ${showThemes ? "items-center": "items-end"} `}>
                 <div onClick={() => setShowThemes(!showThemes)}
-                    className='selected-theme flex items-center justify-center border border-skin-muted hover:border-skin-button rounded cursor-pointer bg-skin-nav'>
-                    <img className='m-1 w-7' src={change_theme} alt='change theme' />
-                    <h3 className='text-skin-button text-base mx-1'>{selectedTheme}</h3>
+                    className='flex items-center justify-center border border-skin-muted hover:border-skin-button rounded cursor-pointer bg-skin-nav'>
+                    <img className='m-1 w-7' src={change_theme} alt='ct' />
+                    {showThemes && <h3 className='text-skin-button text-base mx-1 animate-appear-now'>{selectedTheme}</h3>}
                 </div>
               <div 
                 className={`theme-buttons transition-all duration-300 ${showThemes? 'opacity-1 translate-y-0 z-10': 'opacity-0  -translate-y-2 z-0'} transform relative w-36 bg-skin-nav text-skin-muted text-base py-2`}
