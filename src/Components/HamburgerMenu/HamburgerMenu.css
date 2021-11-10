@@ -6,9 +6,9 @@
     position: relative;
     transition: all 0.2s ease-in-out;
     margin-right: 2%;
-    border: 1px solid rgba(3, 68, 105, 1);
+    border: 1px solid transparent;
+    border-color: rgb(var(--color-button));
     border-radius: 2px;
-    background-color: rgba(3, 68, 105, 0.25);
     z-index: 90;
     
 }
@@ -19,15 +19,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     cursor: pointer;
 }
 
 .HamburgerMenu div{
-    width: 65%;
-    height: 3px;
-    background-color: white;
-    transition: all 0.20s ease-out;  
+    width: 45%;
+    height: 1px;
+    background-color: rgb(var(--color-button));;
+    transition: all 0.20s ease-out; 
+    margin: 4px 
 }
 
 .HamburgerMenu .middle{
@@ -36,11 +37,11 @@
 
 .RotateTop {
     
-    transform: rotate(-37deg) translateX(-7px);
+    transform: rotate(-37deg) translate(-8px,-2px);
 }
 
 .RotateBottom {
-    transform: rotate(216deg) translateX(6px)
+    transform: rotate(216deg) translate(8px,-1px)
 }
 
 .RotateMiddle{
