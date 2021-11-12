@@ -1,4 +1,4 @@
-.NavItems .navs li{
+.NavItems .navs .nav-item{
     width: 100%;
     border-top: 1px solid rgb(41, 41, 41);
     padding: 10px;
@@ -7,7 +7,7 @@
 
 
 
-.NavItems .navs li:last-child{
+.NavItems .navs .nav-item:last-child{
     border-bottom: 1px solid rgb(41, 41, 41);
 }
 

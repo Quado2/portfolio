@@ -15,7 +15,7 @@ function menuClicked (){
 			<div className="flex ">
 				<nav className={`h-screen w-screen fixed top-0 left-0 opacity-0 
 					md:w-36 md:opacity-100 md:z-10 transition-opacity ${showNavItems ? "opacity-100 z-10": "opacity-0 z-0"}`}>
-                   <NavItems showNavItems={showNavItems} />
+                   <NavItems setShowNavItems={setShowNavItems} showNavItems={showNavItems} />
                 </nav>
                 <Topbar showNavItems={showNavItems} menuClicked={menuClicked} />
 				<main className="md:ml-40 transition-all">{props.children}</main>

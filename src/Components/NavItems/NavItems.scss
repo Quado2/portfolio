@@ -1,6 +1,4 @@
-.erase li{
-    opacity: 0;
-}
+
 
 .smooth-in-logo {
     opacity: 0;
@@ -8,13 +6,15 @@
 }
 
 @for $i from 1 through 10{
-    .animate-in li:nth-child(#{$i}){
+    .animate-in .nav-item:nth-child(#{$i}){
+        opacity: 0;
         animation: bounce-in .7s forwards (#{$i *0.05s}),             
     }
 }
 
 @for $i from 1 through 10{
     .animate-in-socials li:nth-child(#{$i}){
+        opacity: 0;
         animation: bounce-in .7s forwards (#{($i+13) *0.05s}),             
     }
 }
