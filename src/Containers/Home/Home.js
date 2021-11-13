@@ -7,14 +7,14 @@ function Home (){
 
     return (
         <div className='home-top  w-full '>
-            <div className=' top-home-container flex flex-col justify-center items-start p-7 sm:p-16  w-full h-3/4'>
+            <div className=' top-home-container flex flex-col justify-center items-start p-7 mt-16 sm:p-16  w-full h-3/4'>
                 <div className= 'first-h2 text-skin-base top-h2 sm:text-7xl lg:text-8xl'>
                     <h2 className=''>H</h2>
                     <h2>i</h2>
                     <h2> &#128526;,</h2>
                     <h2>,</h2>
                 </div>
-                <div className = 'text-skin-base first-h2b sm:text-7xl lg:text-8xl top-h2 h-24 sm:h-28 lg:h-32 items-end'>
+                <div className = 'text-skin-base mt-8 first-h2b sm:text-7xl lg:text-8xl top-h2 h-24 sm:h-28 lg:h-32 items-end'>
                     <h2 className=''> I</h2>
                     <h2>'</h2>
                     <h2>m</h2>
