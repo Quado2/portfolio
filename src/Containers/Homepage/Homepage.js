@@ -9,11 +9,11 @@ export default function Homepage() {
 	return (
 		<>
 		  <Home />
-		  <Portfolio />
 		  <About />
+		  <Portfolio />
 		  <Experience />
-		  <ContactForm />
 		  <Education />
+		  <ContactForm />
 		</>
 	);
 }
