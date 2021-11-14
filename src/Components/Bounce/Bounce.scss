@@ -1,0 +1,106 @@
+:root {
+	--boxColor: #0ff7;
+}
+
+body{
+
+   
+}
+
+.Bounce {
+	background-color: #000;
+	min-height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    perspective: 10em;
+    perspective-origin: 50% calc(50% - 3em );
+}
+
+.scene {
+	position: relative;
+    transform-style: preserve-3d;
+}
+
+.ball {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background-color: lightblue;
+	position: absolute;
+	left: -0.5em;
+	bottom: 1em;
+    background-image: radial-gradient(circle at top, lightblue, #000 );
+}
+
+.ballShadow{
+    position:absolute;
+    width: 100%;  height:100%;
+    background-image: radial-gradient(#0007, #0000 50%);
+}
+
+.cube {
+	width: 2em;
+	height: 2em;
+    perspective: 10em;
+    transform-style: preserve-3d;
+
+    
+	position: absolute;
+	top: -1em;
+	top: -1em;
+	left: -1em;
+
+    .left, .right, .front, .back{
+        display:block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--boxColor);
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.667) inset;
+    }
+
+    .front{transform: translateZ(1em)}
+    .right{transform: rotateY(90deg) translateZ(1em)}
+    .back{transform: rotateY(180deg) translateZ(1em)}
+    .left{transform: rotateY(270deg) translateZ(1em)} 
+
+    .top{
+        position:absolute;
+        width: 2em;
+        height: 2em;
+        background: var(--boxColor);
+        transform: translateY(-50%) rotateX(90deg);
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.667) inset;
+    }
+
+    .bottom{
+        position:absolute;
+        width: 2em;
+        height: 2em;
+        background: #0007;
+        bottom: 0;
+        transform: translateY(50%) rotateX(90deg);
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.667);
+    }
+}
+
+
+
+.floor {
+	position: absolute;
+	transform: translate(-50%, -50%) rotateX(90deg);
+	top: 1em;
+
+	width: 10em;
+	height: 10em;
+	background-image: 
+        radial-gradient(#0000,#000 75%),
+        repeating-conic-gradient(
+            from 45deg,
+            #111 0deg 90deg,
+            #222 90deg 180deg
+        );
+	background-size: 100%, 1em 1em;
+}
