@@ -10,7 +10,9 @@ export default function Bounce() {
 					<div className="back"></div>
 					<div className="left"> </div>
 					<div className="right"></div>
-					<div className="top"></div>
+					<div className="top">
+						<div className="ballShadow"></div>
+					</div>
 					<div className="bottom"></div>
 				</div>
 				<div className="ball"></div>
