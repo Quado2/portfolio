@@ -46,9 +46,8 @@ function App() {
             </Switch>  
           </Layout>
         </Router>
-        
-        
-         } 
+      
+      }
           
     </div>
   );

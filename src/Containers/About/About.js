@@ -1,4 +1,4 @@
-import "./About.scss";
+
 import RollText from "../../Components/RollText/RollText";
 import Bounce from "../../Components/Bounce/Bounce";
 
@@ -7,7 +7,7 @@ function About() {
 		<div className="about w-100  m-0 mb-20">
 			<div className="about-top text-skin-button  w-100 text-5xl mx-5">
 				<RollText text="About Me" />
-				<div className="w-full about-level2 mt-5 flex flex-col items-start justify-start ">
+				<div className="w-full about-level2 mt-5 flex flex-wrap items-start justify-start ">
 					<div className={`w-full md:w-1/2 `}>
 						<h4 className="about-description text-base text-skin-muted pr-5 text-left">
 							Hello! I’m Chikwado Emmanuel. I'm extremely passionate about software
@@ -31,7 +31,7 @@ function About() {
 							</div>
 						</div>
 					</div>
-                    <div className={`w-full`}>
+                    <div className={`w-full md:w-1/2`}>
                         <Bounce />
                     </div>
 				</div>
