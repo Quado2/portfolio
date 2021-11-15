@@ -29,9 +29,9 @@ function App() {
  
   return (
   <div className={`App h-100 bg-skin-general ${theme}`}>
-        {!loaded?
+        {/* {!loaded?
         <Preloader /> 
-        : 
+        :  */}
         <Router>
           <Layout>
             <Switch>
@@ -47,8 +47,8 @@ function App() {
           </Layout>
         </Router>
         
-        
-         } 
+{/*         
+         }  */}
           
     </div>
   );
