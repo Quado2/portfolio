@@ -6,7 +6,7 @@ export default function Bounce() {
 			<div className="scene">
 				<div className="floor"></div>
 				<div className="cube">
-					<div className="front"></div>
+					<div className="front"><h6></h6></div>
 					<div className="back"></div>
 					<div className="left">
 						<div className="inner-top"></div>
