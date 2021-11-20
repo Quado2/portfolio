@@ -1,12 +1,22 @@
 import "./Bounce.scss";
 
 export default function Bounce() {
+	const qualities = ['Brilliant','Smart','Class','Driven', 'Passionate']
+
 	return (
 		<div className="Bounce">
+
+			<div className="texts">
+				{qualities.map((quality,i)=><h4 key={i}>{quality}</h4>)}
+			</div>
 			<div className="scene">
 				<div className="floor"></div>
 				<div className="cube">
-					<div className="front"><h6></h6></div>
+					<div className="front"></div>
+					<div className="qualities">
+					{qualities.map((quality,i)=><h5 key={i}>{quality}</h5>)}
+					</div>
+					
 					<div className="back"></div>
 					<div className="left">
 						<div className="inner-top"></div>
