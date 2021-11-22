@@ -5,7 +5,7 @@ import Work from '../../Components/Work/Work'
 function Experience() {
 
     return(
-        <div className='experience w-100 m-5'>
+        <div className='experience w-100 mx-5 mt-24'>
             <div className=' mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
                 <RollText text='Experience' /> 
             </div>

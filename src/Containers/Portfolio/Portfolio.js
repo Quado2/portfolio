@@ -1,13 +1,23 @@
 import './Portfolio.css'
 import RollText from '../../Components/RollText/RollText'
 import Project from '../../Components/Project/Project'
+import useOnVisible from '../../hooks/useOnVisible'
 
 function Portfolio () {
 
+
+
+	const options = {
+		rootMargin: '0px 0px -200px 0px'
+	   }
+	const [setRef, appearClass] = useOnVisible(options)
+
     return(
-        <div className='portfolio-wrapper h-100 mx-6 mb-4  text-5xl sm:text-7xl text-skin-button'>
+        <div className={` portfolio-wrapper h-100 mx-6 mt-24 text-5xl sm:text-7xl text-skin-button`}>
             <RollText text='My Portfolio' className='text-7xl' />
-            <p className='mt-5 text-base text-left text-skin-muted'> A small sample of works I've done in the past. This is just but a tip of what I'm
+            <p ref={setRef} className={` ${appearClass} --removeNow mt-5 text-base text-left text-skin-muted`}> 
+                A small sample of works I've done in the past. 
+                This is just but a tip of what I'm
                 capable of. 
             </p>
             <div className='projects mt-10 w-100 h-100 flex 

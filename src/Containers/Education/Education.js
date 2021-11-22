@@ -8,7 +8,7 @@ import School from '../../Components/School/School'
 function Education() {
 
     return(
-        <div className='education w-100 m-5'>
+        <div className='education w-100 mx-5 mt-24'>
             <div className=' mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
                 <RollText text='Education' /> 
             </div>

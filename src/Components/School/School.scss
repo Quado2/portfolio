@@ -1,21 +1,21 @@
-.school{
+.school, .--removeNow{
     transform: translateY(15px);
     opacity: 0;
     transition: all ease-in-out 0.6s;
 }
 
-.school.appear{
+.school.appear, .--showNow{
     transform: translateY(0px);
     opacity: 1;
 }
 
 .school .details{
-    border-left: 1px solid gray;
     max-width: 750px;
 }
 
 .school .outer-ball{
     min-width: 30px;
-    height: 30px;
+    min-height: 30px;
     border-radius: 50%;
 }
+
