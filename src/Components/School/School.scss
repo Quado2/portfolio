@@ -1,10 +1,10 @@
-.school{
+.school, .--removeNow{
     transform: translateY(15px);
     opacity: 0;
     transition: all ease-in-out 0.6s;
 }
 
-.school.appear{
+.school.appear, .--showNow{
     transform: translateY(0px);
     opacity: 1;
 }
@@ -19,3 +19,4 @@
     height: 30px;
     border-radius: 50%;
 }
+

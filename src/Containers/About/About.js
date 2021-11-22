@@ -2,12 +2,21 @@
 import RollText from "../../Components/RollText/RollText";
 import Bounce from "../../Components/Bounce/Bounce";
 
+import useOnVisible from "../../hooks/useOnVisible";
+
 function About() {
+
+	const options = {
+		rootMargin: '0px 0px -200px 0px'
+	   }
+	const [setRef, appearClass] = useOnVisible(options)
+	
+
 	return (
-		<div className="about w-100  m-0 mt-20">
-			<div className="about-top text-skin-button  w-100 text-5xl md:text-7xl mx-5">
+		<div className="about m-0 mt-20 ">
+			<div className="about-top text-skin-button text-5xl md:text-7xl mx-5">
 				<RollText text="About Me" />
-				<div className="w-full about-level2 mt-5 flex flex-wrap items-start justify-start ">
+				<div ref={setRef} className={`${appearClass} --removeNow w-full about-level2 mt-5 flex flex-wrap items-start justify-start `}>
 					<div className={`w-full md:w-1/2 `}>
 						<h4 className="about-description text-base md:text-lg text-skin-muted pr-5 text-left">
 							Hello! I’m Chikwado Emmanuel. I'm extremely passionate about software

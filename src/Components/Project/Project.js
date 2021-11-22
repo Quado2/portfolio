@@ -1,11 +1,18 @@
 import "./Project.scss"
 
+import useOnVisible from "../../hooks/useOnVisible"
+
 function Project (props){
+
+    const options = {
+        rootMargin: '0px 0px -200px 0px'
+       }
+    const [setRef, appearClass] = useOnVisible(options)
 
     const {stacks, title, description, pageLink, githubLink} = props
 
     return(       
-        <div className='project rounded h-72 border h-100 p-2 m-5'>
+        <div ref={setRef} className= {`${appearClass} --removeNow project rounded h-72 border h-100 p-2 m-5`}>
                 <div className=' project-top 
                     w-100  flex items-start 
                     justify-center'

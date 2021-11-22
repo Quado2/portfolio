@@ -1,35 +1,9 @@
 import './School.scss'
-import {useState, useEffect} from 'react'
-
-function useOnVisible(options) {
-    const [ref, setRef] = useState(false)
-    const [appearClass, setAppearClass] = useState('')
-    useEffect(()=>{
-
-        const observer = new IntersectionObserver(([entry])=>{
-            if(entry.isIntersecting){
-                setAppearClass('appear')
-            }
-        }, options)
-
-        if(ref){
-            observer.observe(ref)
-        }
-
-        return() => {
-            if(ref){
-                observer.unobserve(ref)
-            }
-        }
-
-    },[ref,options])
-
-    return [setRef, appearClass]
-}
-
+import useOnVisible from '../../hooks/useOnVisible'
 
 function School (props){
 
+    
 
     const options = {
                      rootMargin: '0px 0px -200px 0px'
