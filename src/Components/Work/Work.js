@@ -1,5 +1,4 @@
 import "./Work.scss";
-import { useState, useEffect } from "react";
 import useOnVisible from "../../hooks/useOnVisible";
 
 function Work(props) {
