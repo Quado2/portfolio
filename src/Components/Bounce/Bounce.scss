@@ -27,52 +27,72 @@
 
 		h4{
 			position: absolute;
-			font-size: 10px;
-			right: 1em;
-			top:6.5em;
+			font-size: 11px;
+			left: 79%;
+			top:55%;
 			border: 1px solid;
 			opacity: 0;
-			transform: rotateY(60deg) rotateX(60deg);
-			animation:  dropDown1 10s infinite ease-out;
+			transform: rotateY(60deg) rotateX(90deg);
+			padding: 2px 8px;
+			border-radius: 3px;
+			animation:  dropDown 10s infinite ease-out;
 
 		}
 
 		@for $i from 1 through 6{
 			h4:nth-child(#{$i}){
 				animation-delay:  calc(#{$i *2s});
+				
 			}
 		}
 
-		@keyframes dropDown1 {
+		@keyframes dropDown {
 			0%{
-				opacity: .7;
-				transform: translateY(0em) scale(1) rotateY(60deg)rotateZ(60deg);
+				opacity: .3;
+				transform:  rotateY(60deg)rotateX(90deg);
+			}
+
+			5%{
+				top:70%;
+				left: 30%;
+				transform:rotateY(0deg)rotateX(90deg);;
+				font-size: 16px;
 			}
 
 			7%,23%{
-				transform: translateX(-130px) translateY(90px) rotateY(0deg) rotateZ(0);
+				top:70%;
+				left: 30%;
+				transform: rotateY(0deg) rotateX(0);
 				font-size: 16px;
 			}
 
 			30%,40%{
-				transform: translateX(-130px) translateY(-10px) rotateY(0deg);
+				top:52%;
+				left:15%;
+				transform:  rotateY(0deg);
 				font-size: 25px;
 			}
 
 			50%,60%{
-				transform: translateX(-130px) translateY(-60px) rotateY(0deg);
+				top:35%;
+				left:7%;
+				transform: rotateY(0deg);
 				font-size: 25px;
 				opacity: 1;
 			}
 
 			70%,80%{
-				transform: translateX(-130px) translateY(-50px) rotateY(0deg);
+				top:20%;
+				left:18%;
+				transform: rotateY(0deg);
 				font-size: 16px;
 			}
 
 			90%,95%{
-				transform: translateX(-130px) translateY(-30px) rotateY(0deg);
-				font-size: 14px;
+				top:23%;
+				left:25%;
+				transform: rotateY(0deg);
+				font-size: 16px;
 			}
 
 
@@ -87,8 +107,8 @@
 		transform-style: preserve-3d;
 		animation: sceneRotate var(--rotateSpeed) infinite linear;
 		position: absolute;
-		top: 1em;
-		right:.25em;
+		top: 45%;
+		left:100%;
 		z-index: 1;
 		transform: rotateY(60deg);
 
