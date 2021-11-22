@@ -20,7 +20,7 @@ function ContactForm() {
 
 
     return(
-        <div className='contact-form w-100 m-5 flex flex-col items-center'>
+        <div className='contact-form w-100 mx-5 mt-24 flex flex-col items-center'>
             <Backdrop show={submited} />
             {submited?
                 <Notification 

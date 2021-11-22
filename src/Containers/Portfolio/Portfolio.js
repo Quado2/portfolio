@@ -13,7 +13,7 @@ function Portfolio () {
 	const [setRef, appearClass] = useOnVisible(options)
 
     return(
-        <div className={` portfolio-wrapper h-100 mx-6  text-5xl sm:text-7xl text-skin-button`}>
+        <div className={` portfolio-wrapper h-100 mx-6 mt-24 text-5xl sm:text-7xl text-skin-button`}>
             <RollText text='My Portfolio' className='text-7xl' />
             <p ref={setRef} className={` ${appearClass} --removeNow mt-5 text-base text-left text-skin-muted`}> 
                 A small sample of works I've done in the past. 

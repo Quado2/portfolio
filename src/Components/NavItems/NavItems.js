@@ -32,8 +32,8 @@ function NavItems({showNavItems, setShowNavItems}) {
                 <NavLink onClick={() => setShowNavItems(false)} to="/about-me" className="nav-item" activeClassName="text-skin-button">
                    <li>About</li>
                 </NavLink>
-                <NavLink onClick={() => setShowNavItems(false)} to="/skills" className="nav-item" activeClassName="text-skin-button">
-                    <li>Skills</li>
+                <NavLink onClick={() => setShowNavItems(false)} to="/experience" className="nav-item" activeClassName="text-skin-button">
+                    <li>Experience</li>
                 </NavLink>
                 <NavLink onClick={() => setShowNavItems(false)} to="portfolio" className="nav-item" activeClassName="text-skin-button">
                     <li>Works</li>
