@@ -1,15 +1,14 @@
 
-import './Experience.scss'
 import RollText from '../../Components/RollText/RollText'
 import Work from '../../Components/Work/Work'
 function Experience() {
 
     return(
-        <div className='experience w-100 mx-5 mt-24'>
+        <div className='experience mx-5 mt-16'>
             <div className=' mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
                 <RollText text='Experience' /> 
             </div>
-            <div className='p-0'>
+            <div className='pb-4 h-full'>
                 <Work role='Frontend Developer Intern'
                       company='HNGi8/Zuri Internship'
                       period='August 2021 - present'
