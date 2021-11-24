@@ -8,11 +8,11 @@ import School from '../../Components/School/School'
 function Education() {
 
     return(
-        <div className='education w-100 mx-5 mt-24'>
-            <div className=' mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
+        <div className='education  mx-5 mt-20'>
+            <div className='mb-10 text-left  text-skin-button text-5xl sm:text-7xl '>
                 <RollText text='Education' /> 
             </div>
-            <div className='p-0'>
+            <div className='pb-4'>
                 <School dept='B.Eng Electronic and Computer Engineering'
                       school='Nnamdi Azikiwe University,Awka'
                       period='September 2012 - August 2017'
