@@ -28,14 +28,14 @@ function App() {
   }, [])
  
   return (
-  <div className={`App h-100 bg-skin-general ${theme}`}>
+  <div className={`App bg-skin-general ${theme}`}>
         {!loaded?
         <Preloader /> 
         : 
         <Router>
           <Layout>
             <Switch>
-            <div className='app-wrapper h-100'>
+            <div className='app-wrapper'>
               <Route path="/" exact component={Homepage} />
               <Route path="/about-me" exact component={About} />
               <Route path="/portfolio" exact component={Portfolio} />
