@@ -2,16 +2,19 @@ import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
 import './Input.scss'
-import {useState } from 'react'
+import {useState, useRef, } from 'react'
 
 function Input(props){
 
-    const {list, prompt, name, inputType,
-        handleInputChange, handleContinueClicked,
-        focus, buttonDisabled} = props
+    const {list, prompt, name, inputType, validateData, clearAllFields,
+        handleInputChange, handleContinueClicked, errorMessage, showErrors,
+        focus, buttonDisabled, isValidInput} = props
 
     const stacks = []
-    const [status, setStatus] = useState('write')
+    const [blured, setBlured] = useState(false)
+    const [focused, setFocused] = useState(false)
+
+    const inputRef = useRef()
 
     function handleCheckBoxChange(e){
         const {id, checked} = e.target
@@ -28,80 +31,109 @@ function Input(props){
             }
         }
 
+    }
+
+    //I will handle the blur issue later
+
+    function handleInputFocus(){
+        setFocused(true); setBlured(false)
+    }
+
+    function handleBlur(){
+        validateData()
+        setBlured(true); setFocused(false)
+    }
+
+    let inputIcon;
+    
+     if(focused || (!focused && !blured)){
+            inputIcon = <span className='write'><FontAwesomeIcon icon={faLongArrowAltRight} /></span>
         }
-
-        //I will handle the blur issue later
-
-        function handleInputFocus(){
-            setTimeout(()=>{
-                setStatus('write')
-
-            },200)
+    
+    if(blured){
+        if(isValidInput){
+            inputIcon = <span className='good'>✓</span>
+        }else{
+            inputIcon = <span className='bad'>✕</span>
         }
+    }
 
-        function handleBlur(){
-            setTimeout(()=>{
-                setStatus('good')
-            },200)
-           
-        }
+   if(clearAllFields){
+       if(inputRef.current){
+           inputRef.current.value = ''
+       }
+       
+   }
 
-        return(
-            <div className='our-input'>
-                <label className='text-skin-muted'>{prompt}</label>
-                <div className='inner-our-input'>
-                    <div className='inner-level-2'>
-                        {status==='good'? <span className='good'>✓</span>: null}
-                            {status==='write'? <span className='write'><FontAwesomeIcon icon={faLongArrowAltRight} /></span>: null}
-                        {status==='bad'? <span className='bad'>✕</span>:null}
 
-                        { inputType === 'selectInput'?
-                            <select onChange={handleInputChange} name={name}>
-                                {list.split(',').map((item,i) => {
-                                    return <option key={i} value ={item}>{item}</option>
-                                })}
-                            </select>
-                            :
-                            inputType ==='checkBox'?
-                            <div className='checkbox-wrapper'>
-                                {list.split(',').map((item,i)=>{
-                                    return (
-                                        <div key={i} className ='checkbox-item'>
-                                            <input  id={item} onChange={handleCheckBoxChange} type='checkbox' name = {name}/> <label>{item}</label>
-                                        </div> 
-                                    )
-                                })}
-                            </div>
-                            :
-                            inputType ==='textArea'?
-                            <textarea className='text-skin-base'>
+    return(
+        <div className='our-input'>
+            <label className='text-skin-muted'>{prompt}</label>
+            <div className='inner-our-input'>
+                <div className='inner-level-2'>
+                    {inputIcon}
+
+                    { inputType === 'selectInput' ?
+                        <select onChange={handleInputChange} name={name}>
+                            {list.split(',').map((item,i) => {
+                                return <option key={i} value ={item}>{item}</option>
+                            })}
+                        </select>
+                        :
+                        inputType ==='checkBox'?
+                        <div  ref={inputRef} className='checkbox-wrapper'>
+                            {list.split(',').map((item,i)=>{
+                                return (
+                                    <div key={i} className ='checkbox-item'>
+                                        <input  id={item} onChange={handleCheckBoxChange} type='checkbox' name = {name}/> <label>{item}</label>
+                                    </div> 
+                                )
+                            })}
+                            {(showErrors && !isValidInput) && <h6 className='text-base text-red-500 font-thin'>{errorMessage}</h6>} 
+                        </div>
+                        :
+                        inputType ==='textArea'?
+                        <div className = "w-full">
+                            <textarea ref={inputRef} className='text-skin-base'
+                                onInput={handleInputChange}
+                                onFocus={handleInputFocus}
+                                onBlur={handleBlur}
+                                name={name}
+                            >
 
                             </textarea>
-                            :
-                            <input className='text-skin-base'
-                            onChange={handleInputChange}
+                            {(showErrors && !isValidInput) && <h6 className='text-base text-red-500 font-thin'>{errorMessage}</h6>} 
+                        </div> 
+                        
+                        :
+                        <div className='w-full'>
+                            <input  ref={inputRef} className='text-skin-base'
+                                onChange={handleInputChange}
                                 onFocus={handleInputFocus}
                                 onBlur={handleBlur}
                                 name={name} 
                                 autoFocus={focus} 
                                 type={inputType} />
-
-                        }
+                           {(showErrors && !isValidInput) && <h6 className='text-base text-red-500 font-thin'>{errorMessage}</h6>} 
+                        </div>
                         
-                    </div>
-                    {false?
-                    <button disabled ={buttonDisabled}
-                        onClick={(e) => handleContinueClicked(e,name,stacks)}
-                        >
-                        Continue
-                    </button>
-                    :
-                    null
+
                     }
-                
+                    
                 </div>
+                {false?
+                <button disabled ={buttonDisabled}
+                    onClick={(e) => handleContinueClicked(e,name,stacks)}
+                    >
+                    Continue
+                </button>
+                :
+                null
+                }
+            
             </div>
-        )
+        </div>
+    )
 }
 
 export default Input
