@@ -3,13 +3,11 @@ import { useState } from "react";
 import RollText from "../../Components/RollText/RollText";
 import Input from "../../Components/Input/Input";
 import Backdrop from "../../Components/Backdrop/Backdrop";
-import Notification from "../../Components/Notification/Notification";
 import BriefNotification from "../../Components/Notification/BriefNotification";
 
 function ContactForm() {
 	const [submited, setSubmited] = useState(false);
 	const [submiting, setSubmiting] = useState(false);
-	const [failed, setFailed] = useState(false);
 	const [incorrectName, setIncorrectName] = useState(true);
 	const [incorrectEmail, setIncorrectEmail] = useState(true);
 	const [incorrectMessage, setIncorrectMessage] = useState(false);
@@ -33,6 +31,7 @@ function ContactForm() {
 	}
 
     function clearInputFields(){
+        setName(''); setEmail(''); setMessage('');
         setClearAllFields(true)
         setTimeout(()=>{
             setClearAllFields(false)
@@ -40,9 +39,10 @@ function ContactForm() {
     }
 
 	async function handleSubmited() {
+        console.log('clicked')
+
 		setSubmited(false);
 		setSubmiting(true);
-		setFailed(false);
 
 		const zapierUrl = "https://hooks.zapier.com/hooks/catch/11354032/bmy2foi/";
 
@@ -61,13 +61,16 @@ function ContactForm() {
                     clearInputFields()
 				} else {
 					setSubmiting(false);
+                    
 				}
 			} catch (err) {
+                setSubmiting(false)
                 setNotificationStatus('error')
                 setNotificationMessage('Attempted to send your message but failed, please try again.')
                 showNotification()
 			}
 		} else {
+            setSubmiting(false)
             setNotificationStatus('error')
             setNotificationMessage('Enter correct details.')
             showNotification()
@@ -103,20 +106,18 @@ function ContactForm() {
 				setName(value);
 				break;
 
-			case "email":{
-                setEmail(value);
-            }
-				
-				break;
+			case "email":setEmail(value);	
+			break;
 
-			case "message":
-				setMessage(value);
-				break;
+			case "message":setMessage(value);
+			break;
+
+            default : console.log('Nothing good to see')
 		}
 	}
 
 	return (
-		<div className="contact-form mt-20 flex flex-col items-center  w-full">
+		<div className="contact-form my-20 flex flex-col items-center  w-full">
 			<Backdrop show={submited} />
             {notify && <BriefNotification status={notificationStatus} message={notificationMessage} />}
 			
@@ -162,8 +163,9 @@ function ContactForm() {
 					<button
 						onClick={handleSubmited}
 						className="text-skin-button border border-skin-button text-base px-5 py-1 rounded m-3"
+                        disabled={submiting}
 					>
-						Submit
+						{submiting? "Submitting ...": "Submit"}
 					</button>
 				</div>
 			</div>

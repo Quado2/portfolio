@@ -1,8 +1,8 @@
 import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome'
-import { faListUl, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
 import './Input.scss'
-import {useState, useRef, useEffect } from 'react'
+import {useState, useRef, } from 'react'
 
 function Input(props){
 
