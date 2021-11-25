@@ -2,7 +2,7 @@ import {FontAwesomeIcon}  from '@fortawesome/react-fontawesome'
 import { faListUl, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
 import './Input.scss'
-import {useState } from 'react'
+import {useState, useRef, useEffect } from 'react'
 
 function Input(props){
 
@@ -13,6 +13,8 @@ function Input(props){
     const stacks = []
     const [blured, setBlured] = useState(false)
     const [focused, setFocused] = useState(false)
+
+    const inputRef = useRef()
 
     function handleCheckBoxChange(e){
         const {id, checked} = e.target
@@ -56,17 +58,22 @@ function Input(props){
         }
     }
 
+    useEffect(()=>{
+        console.log("input ref from useeffect: ", inputRef)
+        setRef(inputRef)
+    }, [])
+   
+
+
+
     return(
         <div className='our-input'>
             <label className='text-skin-muted'>{prompt}</label>
             <div className='inner-our-input'>
                 <div className='inner-level-2'>
                     {inputIcon}
-                    {/* {status==='good'? isValidInput ?  <span className='good'>✓</span>: <span className='bad'>✕</span>:null}
-                        {status==='write'?  <span className='write'><FontAwesomeIcon icon={faLongArrowAltRight} /></span>: null}
-                    {status==='bad'? <span className='bad'>✕</span>:null} */}
 
-                    { inputType === 'selectInput'?
+                    { inputType === 'selectInput' ?
                         <select onChange={handleInputChange} name={name}>
                             {list.split(',').map((item,i) => {
                                 return <option key={i} value ={item}>{item}</option>
@@ -87,7 +94,7 @@ function Input(props){
                         :
                         inputType ==='textArea'?
                         <div className = "w-full">
-                            <textarea className='text-skin-base'
+                            <textarea ref={inputRef} className='text-skin-base'
                                 onInput={handleInputChange}
                                 onFocus={handleInputFocus}
                                 onBlur={handleBlur}

@@ -19,7 +19,7 @@ function ContactForm() {
     const [notify, setNotify] = useState('');
     const [messageRef, setMessageRef] = useState('');
     const [emailRef, setEmailRef] = useState('');
-    const [textAreaRef, setTextAreaRef] = useState('');
+    const [nameRef, setNameRef] = useState('');
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -96,6 +96,8 @@ function ContactForm() {
 	}
 
 	function handleInputChange(event) {
+
+        console.log("name ref: ", nameRef.current)
 		const { name, value } = event.target;
 		switch (name) {
 			case "name":
@@ -132,7 +134,7 @@ function ContactForm() {
 						validateData={validateData}
 						errorMessage="Name should have atleast two characters"
 						showErrors={showErrors}
-                        setRef={setMessageRef}
+                        setRef={setNameRef}
 					/>
 					<Input
 						prompt=" Enter Your email address"
@@ -154,7 +156,7 @@ function ContactForm() {
 						validateData={validateData}
 						errorMessage="Message should be at the least, a word."
 						showErrors={showErrors}
-                        setRef={setTextAreaRef}
+                        setRef={setMessageRef}
 					/>
 					<button
 						onClick={handleSubmited}
