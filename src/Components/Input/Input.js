@@ -6,7 +6,7 @@ import {useState, useRef, useEffect } from 'react'
 
 function Input(props){
 
-    const {list, prompt, name, inputType, validateData, setRef,
+    const {list, prompt, name, inputType, validateData, clearAllFields,
         handleInputChange, handleContinueClicked, errorMessage, showErrors,
         focus, buttonDisabled, isValidInput} = props
 
@@ -58,12 +58,12 @@ function Input(props){
         }
     }
 
-    useEffect(()=>{
-        console.log("input ref from useeffect: ", inputRef)
-        setRef(inputRef)
-    }, [])
-   
-
+   if(clearAllFields){
+       if(inputRef.current){
+           inputRef.current.value = ''
+       }
+       
+   }
 
 
     return(
@@ -81,7 +81,7 @@ function Input(props){
                         </select>
                         :
                         inputType ==='checkBox'?
-                        <div className='checkbox-wrapper'>
+                        <div  ref={inputRef} className='checkbox-wrapper'>
                             {list.split(',').map((item,i)=>{
                                 return (
                                     <div key={i} className ='checkbox-item'>
@@ -107,7 +107,7 @@ function Input(props){
                         
                         :
                         <div className='w-full'>
-                            <input className='text-skin-base'
+                            <input  ref={inputRef} className='text-skin-base'
                                 onChange={handleInputChange}
                                 onFocus={handleInputFocus}
                                 onBlur={handleBlur}

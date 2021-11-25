@@ -17,9 +17,7 @@ function ContactForm() {
     const [notificationStatus, setNotificationStatus] = useState('')
     const [notificationMessage, setNotificationMessage] = useState('')
     const [notify, setNotify] = useState('');
-    const [messageRef, setMessageRef] = useState('');
-    const [emailRef, setEmailRef] = useState('');
-    const [nameRef, setNameRef] = useState('');
+    const [clearAllFields,setClearAllFields] = useState(false)
 
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -34,8 +32,11 @@ function ContactForm() {
         },2700)
 	}
 
-    function clearAllFields(){
-
+    function clearInputFields(){
+        setClearAllFields(true)
+        setTimeout(()=>{
+            setClearAllFields(false)
+        },200)
     }
 
 	async function handleSubmited() {
@@ -55,9 +56,9 @@ function ContactForm() {
 				if (response.status === 200) {
 					setSubmiting(false);
                     setNotificationStatus('success')
-                    setNotificationMessage('Your message has been received successfully, I will respond as soon as i can. Thank you.')
+                    setNotificationMessage('Your message has been received, thank you.')
                     showNotification()
-                    clearAllFields()
+                    clearInputFields()
 				} else {
 					setSubmiting(false);
 				}
@@ -96,16 +97,16 @@ function ContactForm() {
 	}
 
 	function handleInputChange(event) {
-
-        console.log("name ref: ", nameRef.current)
 		const { name, value } = event.target;
 		switch (name) {
 			case "name":
 				setName(value);
 				break;
 
-			case "email":
-				setEmail(value);
+			case "email":{
+                setEmail(value);
+            }
+				
 				break;
 
 			case "message":
@@ -134,7 +135,7 @@ function ContactForm() {
 						validateData={validateData}
 						errorMessage="Name should have atleast two characters"
 						showErrors={showErrors}
-                        setRef={setNameRef}
+                        clearAllFields={clearAllFields}
 					/>
 					<Input
 						prompt=" Enter Your email address"
@@ -145,7 +146,7 @@ function ContactForm() {
 						validateData={validateData}
 						errorMessage="Invalid email address"
 						showErrors={showErrors}
-                        setRef={setEmailRef}
+                        clearAllFields={clearAllFields}
 					/>
 					<Input
 						prompt=" Type your message"
@@ -156,7 +157,7 @@ function ContactForm() {
 						validateData={validateData}
 						errorMessage="Message should be at the least, a word."
 						showErrors={showErrors}
-                        setRef={setMessageRef}
+                        clearAllFields={clearAllFields}
 					/>
 					<button
 						onClick={handleSubmited}
