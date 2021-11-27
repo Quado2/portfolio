@@ -12,7 +12,7 @@ export default function Bounce() {
 			<div className="scene">
 				<div className="floor"></div>
 				<div className="cube">
-					<div className="front"></div>
+					<div className="front flex items-center justify-center"><h3 className='p-1 bg-white text-gray-500 text-xs'>box of qualities</h3></div>
 					<div className="qualities">
 					{qualities.map((quality,i)=><h5 key={i}>{quality}</h5>)}
 					</div>
