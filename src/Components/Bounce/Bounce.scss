@@ -248,7 +248,7 @@
 
 		.front h3{
 			font-size: 9px;
-		}
+		} 
 		
 		.left {
 			display: flex;
@@ -320,14 +320,10 @@
 
             h5{
                 position: absolute;
-                font-size: 2px;
+                font-size: 4px;
                 border: 1px solid;
-				top:2em
+				top:8em
             }
-
-			h5:nth-child(2n){
-				top:3em
-			}
 
 			@for $i from 1 through 6{
 				h5:nth-child(#{$i}){
@@ -341,8 +337,6 @@
 					transform: translateX(0em) rotateY(0deg);
 					opacity: 1;
 				}
-
-				
 
 				5%{
 					transform: translateX(-27em) rotateY(-60deg);
