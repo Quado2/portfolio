@@ -1,7 +1,10 @@
 import './Layout.css'
 import NavItems from '../../Components/NavItems/NavItems'
 import Topbar from "../../Components/Topbar/Topbar";
+import Footer from '../../Components/Footer/Footer';
+
 import { useState } from "react";
+
 
 function Layout(props) {
 
@@ -20,7 +23,7 @@ function menuClicked (){
 				<div className='md:ml-36 flex flex-col'>
 					<Topbar showNavItems={showNavItems} menuClicked={menuClicked} />
 					<main className="transition-all w-full ">{props.children}</main>
-					<footer className="border  h-44"></footer>
+					<footer className="border  h-44"><Footer /> </footer>
 				</div>
                 
 			</div>
