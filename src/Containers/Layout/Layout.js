@@ -21,7 +21,9 @@ function menuClicked (){
 				<main className="md:ml-40 transition-all w-full ">{props.children}</main>
 			</div>
 
-			<footer className="footer"></footer>
+			<footer className="footer border h-44">
+
+			</footer>
 		</div>
 	);
 }
