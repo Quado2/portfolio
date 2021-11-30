@@ -17,13 +17,15 @@ function menuClicked (){
 					md:w-36 md:opacity-100 md:z-10 transition-opacity transform md:translate-x-0 ${showNavItems ? "opacity-100 z-10 translate-x-0 ": "opacity-0 -translate-x-full"}`}>
                    <NavItems setShowNavItems={setShowNavItems} showNavItems={showNavItems} />
                 </nav>
-                <Topbar showNavItems={showNavItems} menuClicked={menuClicked} />
-				<main className="md:ml-40 transition-all w-full ">{props.children}</main>
+				<div className='md:ml-36 flex flex-col'>
+					<Topbar showNavItems={showNavItems} menuClicked={menuClicked} />
+					<main className="transition-all w-full ">{props.children}</main>
+					<footer className="border  h-44"></footer>
+				</div>
+                
 			</div>
 
-			<footer className="footer border h-44">
-
-			</footer>
+			
 		</div>
 	);
 }
