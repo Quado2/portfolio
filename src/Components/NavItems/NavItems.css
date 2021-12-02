@@ -12,10 +12,10 @@
 }
 
 .NavItems .navs li:hover{
-    color: rgb(Var(--color-button))
+    color: rgb(var(--color-button))
 }
 
-.NavItems .socials  svg{
+.socials  svg{
     fill: rgb(var(--color-text-muted));
     width: 20px;
     height: 20px;

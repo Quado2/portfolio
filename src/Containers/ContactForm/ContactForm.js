@@ -117,7 +117,7 @@ function ContactForm() {
 	}
 
 	return (
-		<div className="contact-form my-20 flex flex-col items-center  w-full">
+		<div className="contact-form mt-20 flex flex-col items-center w-full">
 			<Backdrop show={submited} />
             {notify && <BriefNotification status={notificationStatus} message={notificationMessage} />}
 			

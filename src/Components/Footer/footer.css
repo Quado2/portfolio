@@ -1,0 +1,18 @@
+.footer .footer-inner h3{
+    display: flex;
+}
+
+.footer .footer-inner div svg{
+    stroke: rgb(var(--color-text-muted));
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+}
+
+.footer .footer-inner ul li{
+    margin: 15px;
+}
+
+.footer .footer-inner svg:hover{
+    fill: rgb(var(--color-button))
+}
