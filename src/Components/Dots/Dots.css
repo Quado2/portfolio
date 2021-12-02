@@ -1,0 +1,6 @@
+.dotted{
+    padding: 0;
+    margin: 0;
+    background-image: radial-gradient(rgb(var(--color-text-muted)), transparent 2px);
+    background-size: 20px 20px;
+}
