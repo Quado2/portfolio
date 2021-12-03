@@ -13,7 +13,7 @@ export default function Bounce() {
 				<div className="floor"></div>
 				<div className="cube">
 					<div className="front flex items-center justify-center">
-						<h3 className='p-1 bg-white text-gray-500 text-xs m-3'
+						<h3 className='p-1 bg-white text-gray-500 text-xs w-2/3 h-2/3'
 						>
 							box of qualities
 						</h3>
