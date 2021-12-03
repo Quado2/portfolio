@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 function Home (){
 
     return (
-        <div className='home-top border border-transparent w-full relative '>
+        <div className='home-top border border-transparent h-screen w-full relative '>
             <Dots />
             <Dots right/>
             <div className='top-home-container flex flex-col justify-center items-start p-7 mt-16 sm:p-16  w-full h-3/4'>
