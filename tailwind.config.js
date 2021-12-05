@@ -45,6 +45,11 @@ module.exports = {
 				"appear-in": "appear 1s ease-in-out forwards 1.2s",
 				"appear-now": "appearNow .7s ease-in-out forwards",
 			},
+			width:{
+				'7/6': '116%',
+				'130':'130%',
+				'9/6': '150%',
+			}
 		},
 		keyframes: {
 			appear: {

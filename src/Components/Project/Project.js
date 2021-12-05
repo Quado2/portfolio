@@ -13,26 +13,29 @@ function Project(props) {
 	return (
 		<div
 			ref={setRef}
-			className={`${appearClass} --removeNow project rounded  w-full my-16 
-                flex ${right ? 'flex-row-reverse': ''} `}
+			className={`${appearClass} --removeNow project rounded  w-full lg:w-11/12 my-16 
+                flex ${right ? '': 'flex-row-reverse'} `}
 		>
 
-			<div className=" opacity-5 image flex items-center justify-center absolute h-full w-full my-3 lg:w-7/12 lg:relative  md:w-10/12 ">
-                <div className='relative h-full'>
+			<div className={` flex items-center justify-center absolute top-0
+                ${right? 'right-0':'left-0'} h-full w-full sm:w-7/12 lg:w-8/12 my-3   
+               `}
+            >
+                <div className='image relative h-full sm:h-auto opacity-5 hover:opacity-100 sm:opacity-50'>
                     <img className={`object-cover h-full`} src={imageLink} alt={title} />
-                    <div className=" layer w-full h-full absolute top-0 left-0 bg-blue-400 opacity-10" ></div>
+                    <div className=" layer w-full h-full absolute top-0 left-0 bg-blue-400 opacity-40 hover:opacity-0" ></div>
                 </div>
 			</div>
 			<div className={`flex flex-col h-full z-10 px-4 ${right? ' items-start' : ' items-end ' } justify-center 
-                    lg:w-5/12   `}>
+                   w-full sm:w-5/12 `}>
 				<div className={`flex flex-col ${right? ' items-start' : ' items-end '} my-7`}>
 					<h4 className="text-lg">Featured Project</h4>
 					<h3 className="text-2xl lg:text-3xl text-skin-muted">{title}</h3>
 				</div>
 				<div className={`desc flex justify-end ${right? ' text-left' : ' text-right' } 
-                     bg-transparent md:bg-skin-nav  my-4 rounded`}
+                     bg-transparent sm:bg-skin-nav my-4 rounded`}
                 >
-					<p className='text-base md:text-lg w-full text-skin-muted '>{description}</p>
+					<p className='desc text-base md:text-lg w-full text-skin-muted sm:p-7 '>{description}</p>
 				</div>
 				<div className={`w-full md:w-4/5 my-4 justify-end ${right? ' text-left' : ' text-right' } `}>
 					<h3 className='text-base text-skin-muted'>{stacks}</h3>
