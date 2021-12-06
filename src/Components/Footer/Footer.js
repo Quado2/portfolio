@@ -16,10 +16,10 @@ export default function Footer(){
                     {c} <h3 className='text-base md:text-lg'>Chikwado Emmanuel - {new Date().getFullYear()}</h3>
                 </div>
                 <ul className={` m-0 socials w-full md:w-1/2 flex justify-center text-skin-muted`}>
-                    <li>{github} </li>
-                    <li>{linkedin} </li>
-                    <li>{twitter} </li>
-                    <li>{facebook} </li>
+                <a href='https://github.com/Quado2' target="_blank" rel="noopener noreferrer" ><li>{github} </li> </a>
+                <a href='https://www.linkedin.com/in/chikwadonuel/' target="_blank" rel="noopener noreferrer"> <li>{linkedin} </li></a>
+                <a href='https://www.twitter.com/quado_' target="_blank" rel="noopener noreferrer"> <li>{twitter} </li></a>
+                <a href='https://www.facebook.com/israel.eze.71' target="_blank" rel="noopener noreferrer"> <li>{facebook} </li></a>
                 </ul>
             </div>
               

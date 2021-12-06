@@ -47,10 +47,10 @@ function NavItems({showNavItems, setShowNavItems}) {
                 
             </ul>
             <ul className={`socials mt-4 flex w-100 justify-center ${showNavItems ? " erase animate-in-socials":"" } `}>
-                <li>{github} </li>
-                <li>{linkedin} </li>
-                <li>{twitter} </li>
-                <li>{facebook} </li>
+                <a href='https://github.com/Quado2' target="_blank" rel="noopener noreferrer" ><li>{github} </li> </a>
+                <a href='https://www.linkedin.com/in/chikwadonuel/' target="_blank" rel="noopener noreferrer"> <li>{linkedin} </li></a>
+                <a href='https://www.twitter.com/quado_' target="_blank" rel="noopener noreferrer"> <li>{twitter} </li></a>
+                <a href='https://www.facebook.com/israel.eze.71' target="_blank" rel="noopener noreferrer"> <li>{facebook} </li></a>
             </ul>
 		</div>
 	);
