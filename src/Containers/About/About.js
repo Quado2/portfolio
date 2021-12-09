@@ -3,8 +3,11 @@ import RollText from "../../Components/RollText/RollText";
 import Bounce from "../../Components/Bounce/Bounce";
 
 import useOnVisible from "../../hooks/useOnVisible";
+import { useEffect } from "react";
 
 function About() {
+
+	useEffect(()=>{window.scrollTo(0, 0)},[])
 
 	const options = {
 		rootMargin: '0px 0px -200px 0px'

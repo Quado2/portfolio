@@ -32,7 +32,7 @@ function App() {
         {!loaded?
         <Preloader /> 
         : 
-        <Router>
+        <Router onUpdate={() => window.scrollTo(0, 0)}>
           <Layout>
             <Switch>
             <div className='app-wrapper'>

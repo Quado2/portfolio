@@ -2,6 +2,7 @@ import './Portfolio.css'
 import RollText from '../../Components/RollText/RollText'
 import Project from '../../Components/Project/Project'
 import useOnVisible from '../../hooks/useOnVisible'
+import { useEffect } from 'react'
 
 
 import paradiso from '../../images/paradiso.png'
@@ -11,7 +12,7 @@ import github from '../../images/github clone.png'
 
 function Portfolio () {
 
-
+    useEffect(()=>{window.scrollTo(0, 0)},[])
 
 	const options = {
 		rootMargin: '0px 0px -200px 0px'
