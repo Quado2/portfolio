@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import RollText from "../../Components/RollText/RollText";
 import Input from "../../Components/Input/Input";
@@ -20,6 +20,8 @@ function ContactForm() {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+
+	useEffect(()=>{window.scrollTo(0, 0)},[])
     
 
 	function showNotification() {

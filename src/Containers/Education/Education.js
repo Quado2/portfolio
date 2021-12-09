@@ -2,10 +2,12 @@
 import './Education.scss'
 import RollText from '../../Components/RollText/RollText'
 import School from '../../Components/School/School'
-
+import {useEffect} from 'react'
 
 
 function Education() {
+
+    useEffect(()=>{window.scrollTo(0, 0)},[])
 
     return(
         <div className='education  mx-5 mt-20'>

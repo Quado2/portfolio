@@ -1,7 +1,11 @@
 
 import RollText from '../../Components/RollText/RollText'
 import Work from '../../Components/Work/Work'
+import {useEffect} from 'react'
+
 function Experience() {
+
+    useEffect(()=>{window.scrollTo(0, 0)},[])
 
     return(
         <div className='experience mx-5 mt-16'>
