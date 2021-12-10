@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.scss'
+import './Home.css'
 import Dots from '../../Components/Dots/Dots'
 
 import {Link} from 'react-router-dom'
@@ -53,6 +54,7 @@ function Home (){
                 <Link to="contact-me" className='contact-me hover:text-skin-hover opacity-0 border cursor-pointer border-skin-button  hover:bg-skin-button mt-12 mx-0 text-sm'>
                     <h6 className='text-skin-button py-1.5 px-10 '>Contact me</h6>
                 </Link>
+                
             </div>
         </div>
          
