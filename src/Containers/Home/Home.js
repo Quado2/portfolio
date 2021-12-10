@@ -50,7 +50,9 @@ function Home (){
                 </div>
                     
                 <p className='opacity-0 appear-in text-left text-base sm:text-1xl my-8 text-skin-muted ' >Full stack web developer / A very sound mind</p>
-                <Link to="contact-me"><a href='#12' className='opacity-0 border cursor-pointer border-skin-button text-skin-button hover:text-skin-hover hover:bg-skin-button py-1.5 px-10  mt-12 mx-0 text-sm'>Contact me</a></Link>
+                <Link to="contact-me">
+                    <h2 className='contact-me opacity-0 border cursor-pointer border-skin-button text-skin-button hover:text-skin-hover hover:bg-skin-button py-1.5 px-10  mt-12 mx-0 text-sm'>Contact me</h2>
+                </Link>
             </div>
         </div>
          
