@@ -51,7 +51,7 @@ function Home (){
                 </div>
                     
                 <p className='opacity-0 appear-in text-left text-base sm:text-1xl my-8 text-skin-muted ' >Full stack web developer / A very sound mind</p>
-                <Link to="contact-me" className='contact-me hover:text-skin-hover opacity-0 border cursor-pointer border-skin-button  hover:bg-skin-button mt-12 mx-0 text-sm'>
+                <Link href='/contact-me' to="contact-me" className='contact-me hover:text-skin-hover opacity-0 border cursor-pointer border-skin-button  hover:bg-skin-button mt-12 mx-0 text-sm'>
                     <h6 className='text-skin-button py-1.5 px-10 '>Contact me</h6>
                 </Link>
                 

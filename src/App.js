@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useSelector,} from 'react-redux';
+import { useSelector,useDispatch} from 'react-redux';
 import {Route, Switch,BrowserRouter as Router} from "react-router-dom"
-
+import { changeTheme } from './redux/actions';
 
 import './App.css';
 import Preloader from './Components/Preloader/Preloader'
@@ -15,24 +15,26 @@ import Homepage from './Containers/Homepage/Homepage';
 
 function App() {
 
+  const dispatch = useDispatch()
   const theme = useSelector((state) => state.theme)
   const [loaded, setLoaded] = useState(false)
 
   useEffect( () => {
-
+    const themeFromStorage =  window.localStorage.getItem('theme')
+    dispatch(changeTheme(themeFromStorage))
     // tried
     const timer = setTimeout(() => {
       setLoaded(true)
     }, 3200);
     return () => clearTimeout(timer)
-  }, [])
+  })
  
   return (
   <div className={`App bg-skin-general ${theme}`}>
         {!loaded?
         <Preloader /> 
         : 
-        <Router onUpdate={() => window.scrollTo(0, 0)}>
+        <Router >
           <Layout>
             <Switch>
             <div className='app-wrapper'>

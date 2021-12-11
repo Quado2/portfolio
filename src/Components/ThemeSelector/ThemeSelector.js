@@ -1,8 +1,8 @@
 //will come back to make this a reusable component
 
-import { useDispatch} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import {changeTheme} from '../../redux/actions'
-import { useState } from "react";
+import { useState, } from "react";
 
 
 import change_theme from "../../images/change_theme.svg"
@@ -17,6 +17,7 @@ export default function ThemeSelector({setInvisible}) {
         
 
     function handleChangeTheme(themeName){
+        window.localStorage.setItem('theme',themeName)
         dispatch(changeTheme(themeName))
          setSelectedTheme(themeName)
     }
