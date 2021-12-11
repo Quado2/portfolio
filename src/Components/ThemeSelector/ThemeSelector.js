@@ -1,8 +1,8 @@
 //will come back to make this a reusable component
 
-import { useDispatch} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import {changeTheme} from '../../redux/actions'
-import { useState } from "react";
+import { useState, } from "react";
 
 
 import change_theme from "../../images/change_theme.svg"
@@ -11,12 +11,14 @@ import BackdropLight from '../BackdropLight/BackdropLight'
 export default function ThemeSelector({setInvisible}) {
 
     const dispatch = useDispatch();
-    const [selectedTheme, setSelectedTheme] = useState("Green-dim")
+    const currentTheme = useSelector((state)=>state.theme)
+    const [selectedTheme, setSelectedTheme] = useState(currentTheme)
     const [showThemes, setShowThemes] = useState(false)
 
         
 
     function handleChangeTheme(themeName){
+        window.localStorage.setItem('theme',themeName)
         dispatch(changeTheme(themeName))
          setSelectedTheme(themeName)
     }
