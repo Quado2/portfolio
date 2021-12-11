@@ -11,7 +11,8 @@ import BackdropLight from '../BackdropLight/BackdropLight'
 export default function ThemeSelector({setInvisible}) {
 
     const dispatch = useDispatch();
-    const [selectedTheme, setSelectedTheme] = useState("Green-dim")
+    const currentTheme = useSelector((state)=>state.theme)
+    const [selectedTheme, setSelectedTheme] = useState(currentTheme)
     const [showThemes, setShowThemes] = useState(false)
 
         
