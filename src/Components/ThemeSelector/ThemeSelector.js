@@ -43,6 +43,8 @@ export default function ThemeSelector({setInvisible}) {
                 >
                 <button className="purple-button hover:text-skin-button p-2 w-full" onClick={()=> handleChangeTheme("Purple-Dim")}>Purple-Dim</button>
                 <button className="white-button hover:text-skin-button p-2 w-full" onClick={() => handleChangeTheme("Green-Dim")}>Green-Dim</button>
+                <button className="white-button hover:text-skin-button p-2 w-full" onClick={() => handleChangeTheme("Navy-Dim")}>Navy-Dim</button>
+                <button className="white-button hover:text-skin-button p-2 w-full" onClick={() => handleChangeTheme("Light")}>Light</button>
               </div>
               
             </div>
