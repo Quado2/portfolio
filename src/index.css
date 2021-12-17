@@ -10,7 +10,7 @@ function used to set the color of at the tailwind.config file
 @layer base {
 	:root {
 		--color-text-base: 255, 255, 255;
-		--color-text-muted: 163, 163, 163;
+		--color-text-muted: 214, 206, 255;;
 		--color-text-inverted: 2, 255, 2;
 		--color-fill: 19, 15, 15;
 		--color-button: 2, 255, 2;
@@ -45,11 +45,11 @@ function used to set the color of at the tailwind.config file
 	}
 
 	.Light {
-		--color-text-base: 88, 89, 91;
+		--color-text-base: 107, 3, 121;
 		--color-text-muted: 124, 89, 126;
 		--color-text-inverted: 255, 199, 14;
 		--color-fill: 22, 38, 49;
-		--color-button: 255, 0, 0;
+		--color-button: 154, 47, 255;
 		--color-button-hover: 235, 0, 0;
 		--color-background-logo: 6, 7, 7;
 		--color-background-general: 255, 255, 255;
@@ -73,6 +73,7 @@ function used to set the color of at the tailwind.config file
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  
 }
 
 body {
