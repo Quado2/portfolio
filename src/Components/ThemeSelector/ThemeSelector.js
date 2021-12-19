@@ -45,7 +45,6 @@ export default function ThemeSelector({setInvisible}) {
                 <button className={`purple-button ${currentTheme == 'Navy-Dim' && 'text-skin-button'} hover:text-skin-button p-2 w-full`} onClick={() => handleChangeTheme("Navy-Dim")}>Navy-Dim</button>
                 <button className={`purple-button ${currentTheme == 'Light' && 'text-skin-button'} hover:text-skin-button p-2 w-full`} onClick={() => handleChangeTheme("Light")}>Light</button>
               </div>
-              
             </div>
         </div>
     )
