@@ -1,6 +1,6 @@
 .NavItems .navs .nav-item{
     width: 100%;
-    border-top: 1px solid rgb(41, 41, 41);
+    border-top: 1px solid rgb(var(--color-text-muted-thin));
     padding: 10px;
     cursor: pointer;
 }
@@ -8,7 +8,7 @@
 
 
 .NavItems .navs .nav-item:last-child{
-    border-bottom: 1px solid rgb(41, 41, 41);
+    border-bottom: 1px solid rgb(var(--color-text-muted-thin));
 }
 
 .NavItems .navs li:hover{

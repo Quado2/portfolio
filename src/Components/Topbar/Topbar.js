@@ -27,7 +27,7 @@ export default function Topbar({showNavItems,menuClicked}){
   
 
     return(
-        <div className = {`fixed flex transition-all duration-300 ${visible ? 'top-4':'-top-10'}  right-4 z-10`}>
+        <div className = {`fixed flex transition-all duration-300 ${visible ? 'top-4':'-top-10'}  right-4 z-20`}>
             <ThemeSelector setInvisible={!showNavItems} />
             <HamburgerMenu rotate={showNavItems} menuClicked={menuClicked} />
         </div>
