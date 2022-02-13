@@ -29,8 +29,8 @@ function Work(props) {
 					className="details mb-10 text-base text-skin-muted text-left
                      mx-4  px-7"
 				>
-					<h4 className="pt-7">{period}</h4>
-					{jd && jd.split(';').map(jobdesc => <p className=" mt-2 pb-5 ">{jobdesc}</p>)}
+					<h4 className="pt-7 pb-3 text-skin-button">{period}</h4>
+					{jd && jd.split(';').map(jobdesc => <p className=" mt-2 pb-1 ">{jobdesc}</p>)}
 					
 				</div>
 			</div>
