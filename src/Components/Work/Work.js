@@ -30,7 +30,8 @@ function Work(props) {
                      mx-4  px-7"
 				>
 					<h4 className="pt-7">{period}</h4>
-					<p className=" mt-2 pb-5 ">{jd}</p>
+					{jd && jd.split(';').map(jobdesc => <p className=" mt-2 pb-5 ">{jobdesc}</p>)}
+					
 				</div>
 			</div>
 		</div>
