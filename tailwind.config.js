@@ -44,6 +44,8 @@ module.exports = {
 			animation: {
 				"appear-in": "appear 1s ease-in-out forwards 1.2s",
 				"appear-now": "appearNow .7s ease-in-out forwards",
+				"slow-in": "slowIn .5s ease-in-out forwards",
+				"disappear": "disappear .5s ease-in-out forwards"
 			},
 			width:{
 				'7/6': '116%',
@@ -61,7 +63,18 @@ module.exports = {
 				"10%":{ opacity: "0"},
 				"100%": { opacity: "1"},
 			},
-			
+			slowIn:{
+				"0%":{opacity:"0"},
+				"30%":{opacity:"0", transform: "translateY(-4px)"},
+				"100%":{transform: "translateY(0)", opacity: "1"}
+			},
+
+			disappear: {
+				"0%":{opacity:"1"},
+				"70%":{opacity:"0", transform: "translateY(-4px)"},
+				"100%":{transform: "translateY(-50vh)", opacity: "0"}
+				
+			}
 		},
 	},
 	variants: {
