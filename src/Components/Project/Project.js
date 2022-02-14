@@ -47,7 +47,7 @@ function Project(props) {
 				<a href={pageLink} className={`w-full md:w-4/5 my-4 justify-end ${
 							right ? " text-left" : " text-right"
 						} `} >
-					<h3 className="text-base text-skin-muted">{stacks}</h3>
+					<h3 className=" text-skin-muted text-sm ">{stacks}</h3>
 				</a>
 
 				<div className={`flex my-4 `}>
