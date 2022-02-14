@@ -9,6 +9,8 @@ import paradiso from '../../images/paradiso.png'
 import brain from '../../images/brain.png'
 import shopify from '../../images/shopify.png'
 import github from '../../images/github clone.png'
+import goodnews from '../../images/goodnews.png'
+import zuri from '../../images/zuri.png'
 
 function Portfolio () {
 
@@ -29,6 +31,25 @@ function Portfolio () {
             </p>
             <div className='projects mt-10  flex  w-full
                     justify-center items-center flex-wrap '>
+                
+                <Project title='Goodnews Baptist Church ' 
+                        description='Official web application built for Goodnews of Christ Baptist Church, Awka.'
+                        stacks='Next Js, GraphQl, Typescript, Styled Component, Test Driven Development'
+                        pageLink='https://www.propheticvoice.online/'
+                        githubLink='https://github.com/Quado2/goodnews'
+                        imageLink={goodnews}
+                        />
+                
+
+                <Project title='Zuri Chat' 
+                        description='Web application built during the Intership program by the interns'
+                        stacks='React, MongoDb, Chakra UI, SPA micro frontend, '
+                        pageLink='https://www.zuri.chat/'
+                        githubLink='https://github.com/Quado2/zc_main'
+                        imageLink={zuri}
+                        right
+                        />
+
                 <Project title='Paradiso Technologies' 
                         description='Web application built for Paradiso Technologies Limited, a
                                      laser and router service company in Nigeria'
@@ -38,8 +59,6 @@ function Portfolio () {
                         imageLink={paradiso}
                         />
                         
-
-
                 <Project title='Imdb Search' 
                         description='You can search for movies, Nominate them and have them cached in your system.'
                         stacks='React'

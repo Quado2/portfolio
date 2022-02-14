@@ -1,4 +1,4 @@
-const themeManagement = (state=0, action) => {
+const themeManagement = (state='Navy-Dim', action) => {
     switch(action.type){
         case "CHANGE_THEME":
             return action.payload
