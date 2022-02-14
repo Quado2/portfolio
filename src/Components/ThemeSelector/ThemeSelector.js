@@ -39,7 +39,7 @@ export default function ThemeSelector({setInvisible}) {
                     {showThemes && <h3 className='text-skin-button text-base mx-1 animate-appear-now'>{selectedTheme}</h3>}
                 </div>
               <div 
-                className={`theme-buttons transition-all duration-300 ${showThemes? 'animate-slow-in': 'animate-disappear'} transform relative w-36 bg-skin-nav text-skin-muted text-base py-2`}
+                className={`theme-buttons ${showThemes? 'animate-slow-in': 'animate-disappear'} transform relative w-36 bg-skin-nav text-skin-muted text-base py-2 z-20`}
                 >
                 <button className={`purple-button ${currentTheme === 'Green-Dim' && 'text-skin-button'} hover:text-skin-button p-2 w-full`} onClick={() => handleChangeTheme("Green-Dim")}>Green-Dim</button>
                 <button className={`purple-button ${currentTheme === 'Navy-Dim' && 'text-skin-button'} hover:text-skin-button p-2 w-full`} onClick={() => handleChangeTheme("Navy-Dim")}>Navy-Dim</button>
