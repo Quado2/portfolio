@@ -1,93 +1,147 @@
-import './Portfolio.css'
-import RollText from '../../Components/RollText/RollText'
-import Project from '../../Components/Project/Project'
-import useOnVisible from '../../hooks/useOnVisible'
-import { useEffect } from 'react'
+import "./Portfolio.css";
+import RollText from "../../Components/RollText/RollText";
+import Project from "../../Components/Project/Project";
+import useOnVisible from "../../hooks/useOnVisible";
+import { useEffect } from "react";
 
+import paradiso from "../../images/paradiso.png";
+import medex from "../../images/Medex.webp";
+import goodnews from "../../images/goodnews.png";
+import vreg from "../../images/vreg.webp";
+import nms from "../../images/nms1.PNG";
 
-import paradiso from '../../images/paradiso.png'
-import brain from '../../images/brain.png'
-import shopify from '../../images/shopify.png'
-import github from '../../images/github clone.png'
-import goodnews from '../../images/goodnews.png'
-import zuri from '../../images/zuri.png'
+const portfolioData = [
+  {
+    title: "V-REG",
+    description:
+      "Official Web Application for registeration and tracking of Vehicles in Nigeria",
+    stacks:
+      "Next Js, Typescript, Styled Component, Redux Test Driven Development, Cypress",
+    pageLink: "https://vreg.gov.ng/",
+    githubLink: "#",
+    imageLink: { vreg },
+  },
 
-function Portfolio () {
+  {
+    title: "Numbering Management System",
+    description:
+      "Web application for registeration and management of number blocks by telecommunication companies in Nigeria",
+    stacks:
+      "Springboot, Microservices, Websockets, RabbitMQ, JUnit 5, React, Typescript, Tomcat, Puppeter and Cucumber js",
+    pageLink: "https://numbering.ncc.gov.ng/",
+    githubLink: "#",
+    imageLink: { nms },
+    right: true,
+  },
+  {
+    title: "Medex",
+    description:
+      "Online market place for stakeholders in drugs and medical equipment",
+    stacks: "React, Ruby on Rails, Typescript, RTL, Cypress",
+    pageLink: "https://medex-dev.ogtlprojects.com/",
+    githubLink: "#",
+    imageLink: { medex },
+  },
 
-    useEffect(()=>{window.scrollTo(0, 0)},[])
+  {
+    title: "Paradiso Technologies",
+    description:
+      "Web application built for Paradiso Technologies Limited, a laser and router service company in Nigeria",
+    stacks: "React, Node js, Docker, Mysql",
+    pageLink: "https://www.paradisotechs.com/",
+    githubLink: "https://github.com/Quado2/paradiso",
+    imageLink: { paradiso },
+    right: true,
+  },
+  {
+    title: "Goodnews Baptist Church ",
+    description:
+      "Official web application built for Goodnews of Christ Baptist Church, Awka.",
+    stacks:
+      "Next Js, GraphQl, Typescript, Styled Component, Test Driven Development",
+    pageLink: "https://www.propheticvoice.online/",
+    githubLink: "https://github.com/Quado2/goodnews",
+    imageLink: { goodnews },
+  },
+];
 
-	const options = {
-		rootMargin: '0px 0px -200px 0px'
-	   }
-	const [setRef, appearClass] = useOnVisible(options)
+function Portfolio() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    return(
-        <div className={` portfolio-wrapper mx-6 mt-24 text-5xl sm:text-7xl text-skin-button`}>
-            <RollText text='My Portfolio' className='text-7xl' />
-            <p ref={setRef} className={` ${appearClass} --removeNow mt-5 text-base text-left text-skin-muted`}> 
-                A small sample of works I've done in the past. 
-                This is just but a tip of what I'm
-                capable of. 
-            </p>
-            <div className='projects mt-10  flex  w-full
-                    justify-center items-center flex-wrap '>
-                
-                <Project title='Goodnews Baptist Church ' 
-                        description='Official web application built for Goodnews of Christ Baptist Church, Awka.'
-                        stacks='Next Js, GraphQl, Typescript, Styled Component, Test Driven Development'
-                        pageLink='https://www.propheticvoice.online/'
-                        githubLink='https://github.com/Quado2/goodnews'
-                        imageLink={goodnews}
-                        />
-                
+  const options = {
+    rootMargin: "0px 0px -200px 0px",
+  };
+  const [setRef, appearClass] = useOnVisible(options);
 
-                <Project title='Zuri Chat' 
-                        description='Web application built during the Intership program by the interns'
-                        stacks='React, MongoDb, Chakra UI, SPA micro frontend, '
-                        pageLink='https://www.zuri.chat/'
-                        githubLink='https://github.com/Quado2/zc_main'
-                        imageLink={zuri}
-                        right
-                        />
+  return (
+    <div
+      className={` portfolio-wrapper mx-6 mt-24 text-5xl sm:text-7xl text-skin-button`}
+    >
+      <RollText text="My Portfolio" className="text-7xl" />
+      <p
+        ref={setRef}
+        className={` ${appearClass} --removeNow mt-5 text-base text-left text-skin-muted`}
+      >
+        Here are a few projects that I have led teams to deliver in the recent
+        past
+      </p>
+      <div
+        className="projects mt-10  flex  w-full
+                    justify-center items-center flex-wrap "
+      >
+       
+        <Project
+          title="V-REG"
+          description="Official Web Application for registeration and tracking of Vehicles in Nigeria"
+          stacks="Next Js, Typescript, Styled Component, Redux Test Driven Development, Cypress"
+          pageLink="https://vreg.gov.ng/"
+          githubLink="#"
+          imageLink={vreg}
+        />
 
-                <Project title='Paradiso Technologies' 
-                        description='Web application built for Paradiso Technologies Limited, a
-                                     laser and router service company in Nigeria'
-                        stacks='React, Node js, Docker, Mysql'
-                        pageLink='https://www.paradisotechs.com/'
-                        githubLink='https://github.com/Quado2/paradiso'
-                        imageLink={paradiso}
-                        />
-                        
-                <Project title='Imdb Search' 
-                        description='You can search for movies, Nominate them and have them cached in your system.'
-                        stacks='React'
-                        pageLink='https://shopify-challenge-eze.netlify.app/'
-                        githubLink='https://github.com/Quado2/shopify-imdb-challenge'
-                        imageLink={shopify}
-                        right
-                        />
+        <Project
+          title="Numbering Management System"
+          description="Web application for registeration and management of number blocks by telecommunication companies in Nigeria"
+          stacks="Springboot, Microservices, Websockets, RabbitMQ, JUnit 5, React, Typescript, Tomcat, Puppeter and Cucumber js"
+          pageLink="https://numbering.ncc.gov.ng/"
+          githubLink="#"
+          imageLink={nms}
+          right
+        />
 
+        <Project
+          title="Medex"
+          description="Online market place for stakeholders in drugs and medical equipment"
+          stacks="React, Ruby on Rails, Typescript, RTL, Cypress"
+          pageLink="https://medex-dev.ogtlprojects.com/"
+          githubLink="#"
+          imageLink={medex}
+          left
+        />
 
-                <Project title='Github Sign up' 
-                        description='Was impressed with github sign up page and decided to try a clone. Work still in progress'
-                        stacks='React, Tailwind css'
-                        pageLink='https://quado-stage2.netlify.app/'
-                        githubLink='https://github.com/Quado2/hng8-team'
-                        imageLink={github}
-                        />
+        <Project
+          title="Paradiso Technologies"
+          description="Web application built for Paradiso Technologies Limited, a laser and router service company in Nigeria"
+          stacks="React, Node js, Docker, Mysql"
+          pageLink="https://www.paradisotechs.com/"
+          githubLink="https://github.com/Quado2/paradiso"
+          imageLink={paradiso}
+          right
+        />
 
-                <Project title='Face Analysis API' 
-                        description='Used free AI API to analyze faces on an image. My very first project when I started out with web development. Inspired by the course project.'
-                        stacks='React, Node js Postgresql'
-                        pageLink='https://smart-brain-200.herokuapp.com//'
-                        githubLink='https://github.com/Quado2/Face-Analyzer'
-                        imageLink={brain}
-                        right
-                        />
-            </div>
-        </div>
-    )
+        <Project
+          title="Goodnews Baptist Church "
+          description="Official web application built for Goodnews of Christ Baptist Church, Awka."
+          stacks="Next Js, GraphQl, Typescript, Styled Component, Test Driven Development"
+          pageLink="https://www.propheticvoice.online/"
+          githubLink="https://github.com/Quado2/goodnews"
+          imageLink={goodnews}
+        />
+      </div>
+    </div>
+  );
 }
 
-export default Portfolio
+export default Portfolio;
