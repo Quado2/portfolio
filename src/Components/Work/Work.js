@@ -31,7 +31,7 @@ function Work(props) {
           </h3>
         </div>
         <div
-          style={{ maxHeight: showAll ? "130vh" : "50vh" }}
+          style={{ maxHeight: showAll ? "150vh" : "50vh" }}
           className="details transition-all duration-700 ease-in-out mb-10 text-base text-skin-muted text-left
                      mx-0 sm:mx-4  px-2 sm:px-7 z-5"
         >
