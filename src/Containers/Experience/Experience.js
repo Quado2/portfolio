@@ -15,8 +15,8 @@ const experiences = [
     •	Utilized AWS Lambda, API gateways, Amazon Simple Queue Service (Amazon SQS), and Amazon Simple Notification Service (Amazon SNS) to implement an event-driven architecture for backlog payments;
     •	Employed Docker and Kubernetes for containerization;
     •	Practiced test-driven development (TDD) for unit and integration testing using Jest and behavior-driven development (BDD) for end-to-end testing with Puppeteer and Cucumber;
-    •	Collaborated with stakeholders and the software development team to refine project requirements;
-    •	Participated in code reviews, providing constructive feedback to enhance code quality and maintainability
+    •	Collaborated with stakeholders and the software development team to refine project requirements.;
+    •	Participated in code reviews, providing constructive feedback to enhance code quality and maintainability.
     `,
   },
   {
