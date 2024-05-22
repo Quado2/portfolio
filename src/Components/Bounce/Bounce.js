@@ -1,7 +1,7 @@
 import "./Bounce.scss";
 
 export default function Bounce() {
-	const qualities = ['Leadership','Team Work','Effective Communication','Problem Solving', 'Empathy']
+	const qualities = ['Leadership','Team Player','Detailed','Problem Solving', 'Reliable']
 
 	return (
 		<div className="Bounce">

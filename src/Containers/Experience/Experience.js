@@ -22,7 +22,7 @@ const experiences = [
   {
     role: "Senior Software Engineer",
     company: "Molcom Multi-Concepts Limited, Abuja, Nigeria.",
-    period: "June 2022 - Present(Part Time)",
+    period: "Nov 2022 - Present(Part Time)",
     jd: `• Currently operating as a senior software developer, leading a team
     comprising one UI/UX designer, two front-end developers, and two backend developers.;
     • Designed and architected software for a numbering management system

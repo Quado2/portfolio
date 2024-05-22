@@ -1,11 +1,17 @@
-
-
-.work .details{
-    max-width: 750px;
+.work .details {
+  max-width: 750px;
 }
 
-.work .outer-ball{
-    min-width: 30px;
-    min-height: 30px;
-    border-radius: 50%;
+.height- .work .outer-ball {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+}
+
+.gradient-hide{
+  background: linear-gradient(
+    360deg,
+    rgba(var(--color-background-general)) 30%,
+    transparent 100%
+  );
 }
