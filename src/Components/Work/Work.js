@@ -44,12 +44,11 @@ function Work(props) {
         <div className={`${!showAll ? "gradient-hide": ""} from-20% h-72 w-full z-10 absolute bottom-0 right-0 flex justify-center items-end  pb-12`}>
           <button 
             onClick={() => setShowAll((prev) => !prev)}
-            className="hover:text-skin-hover
-                    border cursor-pointer
-                    border-skin-button
-                    hover:bg-skin-button mt-12 mx-0 text-sm"
+            className="border cursor-pointer
+                    border-skin-button_sec 
+                     mt-12 mx-0 text-sm"
           >
-            <h6 className="text-skin-button hover:text-skin-base py-1.5 px-10 ">
+            <h6 className="text-skin-button_sec  py-1.5 px-10 ">
               {showAll ? "Show Less" : "View More"}
             </h6>
           </button>

@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       colors: {
         bg_general: withOpacity("--color-background-general"),
-				bred:"#ff0000"
+        bred: "#ff0000",
       },
       textColor: {
         skin: {
@@ -22,6 +22,8 @@ module.exports = {
           muted: withOpacity("--color-text-muted"),
           hover: withOpacity("--color-text-hover"),
           button: withOpacity("--color-button"),
+          button_sec: withOpacity("--color-button-sec"),
+          bg_inverted: withOpacity("--color-background-general"), 
         },
       },
       borderColor: {
@@ -30,6 +32,7 @@ module.exports = {
           base: withOpacity("--color-text-base"),
           muted: withOpacity("--color-text-muted"),
           hover: withOpacity("--color-text-hover"),
+          button_sec: withOpacity("--color-button-sec"),
         },
       },
 
@@ -42,6 +45,7 @@ module.exports = {
           logo: withOpacity("--color-background-logo"),
           general: withOpacity("--color-background-general"),
           nav: withOpacity("--color-background-nav"),
+          button_sec: withOpacity("--color-button-sec"),
         },
       },
 
