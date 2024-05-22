@@ -15,6 +15,7 @@ function used to set the color of at the tailwind.config file
 		--color-text-inverted: 2, 255, 2;
 		--color-fill: 19, 15, 15;
 		--color-button: 2, 255, 2;
+		--color-button-sec: 236,236,163;
 		--color-button-hover: 0, 197, 99;
 		--color-background-logo: 6, 7, 7;
 		--color-background-general: 29, 29, 29;
@@ -32,6 +33,7 @@ function used to set the color of at the tailwind.config file
 		--color-background-logo: 6, 7, 7;
 		--color-background-general: 29, 29, 29;
 		--color-background-nav: 19, 19, 19;
+		--color-button-sec: 236,236,163;
 	}
 
 	.Navy-Dim {
@@ -45,6 +47,7 @@ function used to set the color of at the tailwind.config file
 		--color-background-logo: 6, 7, 7;
 		--color-background-general: 17, 34, 64;
 		--color-background-nav: 10, 25, 47;
+		--color-button-sec: 247,212,214;
 	}
 
 	.Light {
@@ -58,6 +61,7 @@ function used to set the color of at the tailwind.config file
 		--color-background-logo: 6, 7, 7;
 		--color-background-general: 255, 255, 255;
 		--color-background-nav: 233, 233, 233;
+		--color-button-sec: 222,60,110;
 	}
 }
 
